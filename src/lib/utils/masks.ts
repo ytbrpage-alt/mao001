@@ -144,3 +144,9 @@ export function formatName(name: string): string {
         })
         .join(' ');
 }
+
+// Aliases for compatibility
+export const maskCPF = formatCPF;
+export const maskPhone = formatPhone;
+export const maskCEP = formatCEP;
+

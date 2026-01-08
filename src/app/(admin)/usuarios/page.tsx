@@ -21,10 +21,20 @@ import { cn } from '@/lib/utils/cn';
 
 // Componentes auxiliares
 const RoleBadge = ({ role }: { role: UserRole }) => {
-    const config = {
+    const config: Record<UserRole, { label: string; icon: typeof ShieldCheck; class: string }> = {
         admin: { label: 'Admin', icon: ShieldCheck, class: 'bg-purple-100 text-purple-700' },
         supervisor: { label: 'Supervisor', icon: Shield, class: 'bg-blue-100 text-blue-700' },
         evaluator: { label: 'Avaliador', icon: UserIcon, class: 'bg-green-100 text-green-700' },
+        client: { label: 'Cliente', icon: UserIcon, class: 'bg-brand-100 text-brand-700' },
+        nurse: { label: 'Enfermeiro', icon: UserIcon, class: 'bg-teal-100 text-teal-700' },
+        caregiver: { label: 'Cuidador', icon: UserIcon, class: 'bg-orange-100 text-orange-700' },
+        nurse_tech: { label: 'Téc. Enfermagem', icon: UserIcon, class: 'bg-cyan-100 text-cyan-700' },
+        physiotherapist: { label: 'Fisioterapeuta', icon: UserIcon, class: 'bg-lime-100 text-lime-700' },
+        nutritionist: { label: 'Nutricionista', icon: UserIcon, class: 'bg-amber-100 text-amber-700' },
+        psychologist: { label: 'Psicólogo', icon: UserIcon, class: 'bg-pink-100 text-pink-700' },
+        speech_therapist: { label: 'Fonoaudiólogo', icon: UserIcon, class: 'bg-violet-100 text-violet-700' },
+        occupational_therapist: { label: 'Ter. Ocupacional', icon: UserIcon, class: 'bg-rose-100 text-rose-700' },
+        physician: { label: 'Médico', icon: UserIcon, class: 'bg-indigo-100 text-indigo-700' },
     };
 
     const { label, icon: Icon, class: className } = config[role];

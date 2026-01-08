@@ -2,8 +2,7 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/(portals)/cliente/paciente/page": "app/(portals)/cliente/paciente/page.js",
   "/(portals)/cliente/profissionais/page": "app/(portals)/cliente/profissionais/page.js",
-  "/(portals)/cliente/mais/page": "app/(portals)/cliente/mais/page.js",
-  "/(portals)/cliente/agenda/page": "app/(portals)/cliente/agenda/page.js",
+  "/(portals)/cliente/paciente/medicamentos/page": "app/(portals)/cliente/paciente/medicamentos/page.js",
   "/(portals)/cliente/documentos/page": "app/(portals)/cliente/documentos/page.js",
-  "/(portals)/cliente/paciente/medicamentos/page": "app/(portals)/cliente/paciente/medicamentos/page.js"
+  "/(portals)/cliente/mais/page": "app/(portals)/cliente/mais/page.js"
 }
