@@ -6,6 +6,7 @@ import { SummaryCard } from '@/components/shared/SummaryCard';
 import { Checkbox } from '@/components/ui/Checkbox';
 import { RadioGroup } from '@/components/ui/RadioGroup';
 import { Input } from '@/components/ui/Input';
+import type { HealthHistoryData } from '@/types';
 
 const NEUROLOGICAL_CONDITIONS = [
     { id: 'alzheimer', label: 'Alzheimer / Demência' },
@@ -37,9 +38,10 @@ const MOBILITY_CONDITIONS = [
 
 const FALLS_OPTIONS = [
     { value: 'none', label: 'Nenhuma' },
-    { value: 'one_no_injury', label: '1 queda, sem lesão grave' },
-    { value: 'one_with_injury', label: '1 queda, com lesão' },
-    { value: 'multiple', label: 'Múltiplas quedas', badge: 'Alto risco', badgeColor: 'danger' as const },
+    { value: '1_month', label: 'Última queda há menos de 1 mês', badge: 'Risco elevado', badgeColor: 'danger' as const },
+    { value: '3_months', label: 'Última queda há 1-3 meses' },
+    { value: '6_months', label: 'Última queda há 3-6 meses' },
+    { value: 'frequent', label: 'Quedas frequentes', badge: 'Alto risco', badgeColor: 'danger' as const },
 ];
 
 const MEDICATION_COUNT_OPTIONS = [
@@ -199,7 +201,7 @@ export function Step3Health() {
                     label="Quedas recentes (últimos 6 meses)"
                     options={FALLS_OPTIONS}
                     value={healthHistory.recentFalls}
-                    onValueChange={(value) => updateHealthHistory({ recentFalls: value })}
+                    onValueChange={(value) => updateHealthHistory({ recentFalls: value as HealthHistoryData['recentFalls'] })}
                 />
 
                 <Checkbox
@@ -223,7 +225,7 @@ export function Step3Health() {
                     label="Quantidade aproximada de medicamentos"
                     options={MEDICATION_COUNT_OPTIONS}
                     value={healthHistory.medicationCount}
-                    onValueChange={(value) => updateHealthHistory({ medicationCount: value })}
+                    onValueChange={(value) => updateHealthHistory({ medicationCount: value as HealthHistoryData['medicationCount'] })}
                 />
 
                 <div className="space-y-3">
@@ -312,7 +314,7 @@ export function Step3Health() {
                     {
                         label: 'Quedas recentes',
                         value: healthHistory.recentFalls === 'none' ? 'Não' : 'Sim',
-                        color: healthHistory.recentFalls === 'multiple' ? 'danger' : 'default',
+                        color: healthHistory.recentFalls === 'frequent' || healthHistory.recentFalls === '1_month' ? 'danger' : 'default',
                     },
                     {
                         label: 'Usa insulina',

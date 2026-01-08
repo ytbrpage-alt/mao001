@@ -30,13 +30,13 @@ export default function EvaluationPDFPage() {
     const params = useParams();
     const router = useRouter();
     const evaluationId = params.id as string;
-    const { evaluations, getEvaluation } = useEvaluationStore();
+    const { evaluations, getEvaluationById } = useEvaluationStore();
 
     const [isGenerating, setIsGenerating] = useState(false);
     const [isGenerated, setIsGenerated] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
-    const evaluation = getEvaluation(evaluationId);
+    const evaluation = getEvaluationById(evaluationId);
 
     const handleGeneratePDF = async () => {
         setIsGenerating(true);
@@ -209,11 +209,10 @@ export default function EvaluationPDFPage() {
                             </div>
                             <div>
                                 <p className="text-xs uppercase tracking-wide" style={{ color: 'rgb(var(--color-text-secondary))' }}>
-                                    Gênero
+                                    Estado Civil
                                 </p>
                                 <p className="font-medium" style={{ color: 'rgb(var(--color-text))' }}>
-                                    {evaluation.patient.gender === 'male' ? 'Masculino' :
-                                        evaluation.patient.gender === 'female' ? 'Feminino' : 'Não informado'}
+                                    {evaluation.patient.maritalStatus || 'Não informado'}
                                 </p>
                             </div>
                         </div>
@@ -231,7 +230,7 @@ export default function EvaluationPDFPage() {
                                     Score KATZ
                                 </p>
                                 <p className="font-medium" style={{ color: 'rgb(var(--color-text))' }}>
-                                    {evaluation.katzScore ?? 'Não calculado'}
+                                    {evaluation.results?.katzScore ?? 'Não calculado'}
                                 </p>
                             </div>
                             <div>
@@ -239,7 +238,7 @@ export default function EvaluationPDFPage() {
                                     Score ABEMID
                                 </p>
                                 <p className="font-medium" style={{ color: 'rgb(var(--color-text))' }}>
-                                    {evaluation.abemidScore ?? 'Não calculado'}
+                                    {evaluation.results?.abemidScore ?? 'Não calculado'}
                                 </p>
                             </div>
                         </div>

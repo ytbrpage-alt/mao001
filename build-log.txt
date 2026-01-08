@@ -1,0 +1,68 @@
+﻿  Ôû▓ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+   Generating static pages (0/36) ...
+   Generating static pages (9/36) 
+   Generating static pages (18/36) 
+   Generating static pages (27/36) 
+ Ô£ô Generating static pages (36/36)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+Ôöî Ôùï /                                    4.46 kB         146 kB
+Ôö£ Ôùï /_not-found                          876 B          88.2 kB
+Ôö£ Ôùï /admin                               3.84 kB         149 kB
+Ôö£ ãÆ /api/auth/[...nextauth]              0 B                0 B
+Ôö£ Ôùï /avaliacao                           3.79 kB         149 kB
+Ôö£ ãÆ /avaliacao/[id]                      34.5 kB         144 kB
+Ôö£ ãÆ /avaliacao/[id]/contrato             13 kB           119 kB
+Ôö£ ãÆ /avaliacao/[id]/historico            8.79 kB         157 kB
+Ôö£ ãÆ /avaliacao/[id]/pdf                  5.46 kB         156 kB
+Ôö£ ãÆ /avaliacao/[id]/proposta             6.9 kB          113 kB
+Ôö£ Ôùï /avaliacao/nova                      142 B          87.5 kB
+Ôö£ Ôùï /cliente                             6.37 kB         158 kB
+Ôö£ Ôùï /cliente/agenda                      6.26 kB         143 kB
+Ôö£ Ôùï /cliente/documentos                  5.84 kB         149 kB
+Ôö£ Ôùï /cliente/financeiro                  9.11 kB         149 kB
+Ôö£ Ôùï /cliente/mais                        3.66 kB         149 kB
+Ôö£ Ôùï /cliente/mensagens                   1.24 kB         155 kB
+Ôö£ Ôùï /cliente/paciente                    8.6 kB          157 kB
+Ôö£ Ôùï /cliente/paciente/evolucao           3.52 kB         153 kB
+Ôö£ Ôùï /cliente/paciente/exames             3.49 kB         153 kB
+Ôö£ Ôùï /cliente/paciente/medicamentos       7.94 kB         156 kB
+Ôö£ Ôùï /cliente/paciente/saude              7.52 kB         149 kB
+Ôö£ Ôùï /cliente/profissionais               8.35 kB         141 kB
+Ôö£ Ôùï /login                               6.27 kB         142 kB
+Ôö£ Ôùï /pro/cuidador                        10.5 kB         156 kB
+Ôö£ Ôùï /pro/cuidador/agenda                 5.25 kB         141 kB
+Ôö£ Ôùï /pro/cuidador/evolucoes              6.86 kB         143 kB
+Ôö£ Ôùï /pro/cuidador/mensagens              1.32 kB         156 kB
+Ôö£ Ôùï /pro/cuidador/pacientes              8.3 kB          141 kB
+Ôö£ Ôùï /pro/cuidador/perfil                 7.14 kB         147 kB
+Ôö£ Ôùï /pro/cuidador/relatorios             7.78 kB         150 kB
+Ôö£ Ôùï /pro/enfermeiro                      9.27 kB         152 kB
+Ôö£ Ôùï /pro/enfermeiro/agenda               2.87 kB         133 kB
+Ôö£ Ôùï /pro/enfermeiro/evolucoes            6.43 kB         137 kB
+Ôö£ Ôùï /pro/enfermeiro/mensagens            1.32 kB         156 kB
+Ôö£ Ôùï /pro/enfermeiro/pacientes            8.42 kB         141 kB
+Ôö£ Ôùï /pro/enfermeiro/perfil               6.18 kB         146 kB
+Ôö£ Ôùï /pro/enfermeiro/procedimentos        4.8 kB          152 kB
+Ôö£ Ôùï /registro                            5.85 kB         138 kB
+Ôöö Ôùï /usuarios                            6.48 kB         152 kB
++ First Load JS shared by all            87.3 kB
+  Ôö£ chunks/2117-7bc7a4bb44db75bf.js      31.7 kB
+  Ôö£ chunks/fd9d1056-32d34929e58d5bb4.js  53.6 kB
+  Ôöö other shared chunks (total)          1.96 kB
+
+
+ãÆ Middleware                             47.9 kB
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
+

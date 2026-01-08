@@ -261,27 +261,27 @@ export function AnalyticsDashboard() {
                     <h3 className="font-semibold text-neutral-900 mb-4">Avaliações Recentes</h3>
                     {metrics.recentEvaluations.length > 0 ? (
                         <ul className="space-y-3">
-                            {metrics.recentEvaluations.map((eval) => (
+                            {metrics.recentEvaluations.map((evalItem) => (
                                 <li
-                                    key={eval.id}
+                                    key={evalItem.id}
                                     className="flex items-center justify-between text-sm py-2 border-b border-neutral-100 last:border-0"
                                 >
                                     <div>
-                                        <p className="font-medium text-neutral-900">{eval.patientName}</p>
+                                        <p className="font-medium text-neutral-900">{evalItem.patientName}</p>
                                         <p className="text-neutral-500 text-xs">
-                                            {formatRelativeDate(eval.date)}
+                                            {formatRelativeDate(evalItem.date)}
                                         </p>
                                     </div>
                                     <span
                                         className={cn(
                                             'px-2 py-1 rounded-full text-xs font-medium',
-                                            eval.status === 'completed' && 'bg-success-100 text-success-800',
-                                            eval.status === 'pending' && 'bg-warning-100 text-warning-800',
-                                            eval.status === 'draft' && 'bg-neutral-100 text-neutral-800'
+                                            evalItem.status === 'completed' && 'bg-success-100 text-success-800',
+                                            evalItem.status === 'pending' && 'bg-warning-100 text-warning-800',
+                                            evalItem.status === 'draft' && 'bg-neutral-100 text-neutral-800'
                                         )}
                                     >
-                                        {eval.status === 'completed' ? 'Concluída' :
-                                            eval.status === 'pending' ? 'Pendente' : 'Rascunho'}
+                                        {evalItem.status === 'completed' ? 'Concluída' :
+                                            evalItem.status === 'pending' ? 'Pendente' : 'Rascunho'}
                                     </span>
                                 </li>
                             ))}

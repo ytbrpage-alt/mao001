@@ -7,9 +7,12 @@ export interface AbemidData {
     feeding: number;            // 0-3
     mobility: number;           // 0-3
     skinCare: number;           // 0-3
+    skin: number;               // alias for skinCare
     procedures: number;         // 0-3
     medications: number;        // 0-3
+    medication: number;         // alias for medications
     monitoring: number;         // 0-3
+    elimination: number;        // 0-5
     activeTriggers: string[];
     notes: string;
 }

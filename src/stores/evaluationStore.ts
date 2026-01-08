@@ -141,12 +141,16 @@ const initialAbemid: AbemidData = {
     consciousness: 0,
     breathing: 0,
     feeding: 0,
-    medication: 0,
+    mobility: 0,
+    skinCare: 0,
     skin: 0,
+    procedures: 0,
+    medications: 0,
+    medication: 0,
+    monitoring: 0,
     elimination: 0,
-    totalScore: 0,
     activeTriggers: [],
-    indicatedProfessional: 'caregiver',
+    notes: '',
 };
 
 const initialKatz: KatzData = {
