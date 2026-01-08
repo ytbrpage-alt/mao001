@@ -1,0 +1,282 @@
+/* ============================================
+   DESIGN TOKENS - EFFECTS
+   Mãos Amigas Design System v2.0
+   Shadows, Borders, Transitions, Animations
+   ============================================ */
+
+:root {
+    /* ===========================================
+     BORDER RADIUS
+     =========================================== */
+    --radius-none: 0;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-3xl: 24px;
+    --radius-full: 9999px;
+
+    /* ===========================================
+     Z-INDEX SCALE
+     =========================================== */
+    --z-auto: auto;
+    --z-0: 0;
+    --z-10: 10;
+    /* Elevated elements */
+    --z-20: 20;
+    /* Dropdowns */
+    --z-30: 30;
+    /* Sticky headers */
+    --z-40: 40;
+    /* Modal overlay */
+    --z-50: 50;
+    /* Modal content */
+    --z-60: 60;
+    /* Toast notifications */
+    --z-70: 70;
+    /* Tooltips */
+    --z-100: 100;
+    /* Maximum priority */
+
+    /* ===========================================
+     TRANSITION DURATIONS
+     =========================================== */
+    --duration-fast: 100ms;
+    --duration-normal: 150ms;
+    --duration-slow: 200ms;
+    --duration-slower: 300ms;
+    --duration-slowest: 500ms;
+
+    /* ===========================================
+     TRANSITION EASING
+     =========================================== */
+    --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* ===========================================
+     COMPOSITE TRANSITIONS
+     =========================================== */
+    --transition-fast: all var(--duration-fast) var(--ease-default);
+    --transition-normal: all var(--duration-normal) var(--ease-default);
+    --transition-slow: all var(--duration-slow) var(--ease-default);
+    --transition-colors: background-color var(--duration-normal) var(--ease-default),
+        border-color var(--duration-normal) var(--ease-default),
+        color var(--duration-normal) var(--ease-default);
+    --transition-shadow: box-shadow var(--duration-normal) var(--ease-default);
+    --transition-transform: transform var(--duration-normal) var(--ease-default);
+
+    /* ===========================================
+     FOCUS RING STYLES
+     =========================================== */
+    --focus-ring-width: 3px;
+    --focus-ring-style: 0 0 0 var(--focus-ring-width) var(--color-focus-ring);
+    --focus-ring-offset: 2px;
+
+    /* ===========================================
+     BLUR VALUES
+     =========================================== */
+    --blur-none: 0;
+    --blur-sm: 4px;
+    --blur-md: 8px;
+    --blur-lg: 16px;
+    --blur-xl: 24px;
+    --blur-2xl: 40px;
+
+    /* ===========================================
+     GLASSMORPHISM
+     =========================================== */
+    --glass-bg-light: rgba(255, 255, 255, 0.8);
+    --glass-bg-dark: rgba(22, 22, 26, 0.85);
+    --glass-blur: var(--blur-lg);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===========================================
+   ANIMATION KEYFRAMES
+   =========================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+}
+
+/* ===========================================
+   ANIMATION UTILITIES
+   =========================================== */
+
+.animate-fade-in {
+    animation: fadeIn var(--duration-slow) var(--ease-out);
+}
+
+.animate-fade-out {
+    animation: fadeOut var(--duration-slow) var(--ease-in);
+}
+
+.animate-slide-up {
+    animation: slideUp var(--duration-slow) var(--ease-out);
+}
+
+.animate-slide-down {
+    animation: slideDown var(--duration-slow) var(--ease-out);
+}
+
+.animate-scale-in {
+    animation: scaleIn var(--duration-normal) var(--ease-out);
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s var(--ease-in-out) infinite;
+}
+
+.animate-bounce {
+    animation: bounce 0.5s var(--ease-bounce);
+}
+
+.animate-shake {
+    animation: shake 0.5s var(--ease-default);
+}

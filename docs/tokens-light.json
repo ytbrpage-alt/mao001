@@ -1,0 +1,382 @@
+{
+    "name": "Mãos Amigas Design System - Light Mode",
+    "version": "1.0.0",
+    "generated": "2026-01-08",
+    "mode": "light",
+    "colors": {
+        "background": {
+            "base": {
+                "value": "#FFFFFF",
+                "rgb": "rgb(255, 255, 255)",
+                "hsl": "hsl(0, 0%, 100%)",
+                "cssVar": "--color-bg",
+                "usage": [
+                    "body",
+                    "app background",
+                    "root element"
+                ]
+            },
+            "elevated": {
+                "value": "#FFFFFF",
+                "rgb": "rgb(255, 255, 255)",
+                "hsl": "hsl(0, 0%, 100%)",
+                "cssVar": "--color-bg-elevated",
+                "usage": [
+                    "cards",
+                    "modals",
+                    "dropdowns"
+                ]
+            },
+            "surface": {
+                "value": "#FAFAFA",
+                "rgb": "rgb(250, 250, 250)",
+                "hsl": "hsl(0, 0%, 98%)",
+                "cssVar": "--color-bg-surface",
+                "usage": [
+                    "hover states",
+                    "table rows"
+                ]
+            },
+            "muted": {
+                "value": "#F4F4F5",
+                "rgb": "rgb(244, 244, 245)",
+                "hsl": "hsl(240, 5%, 96%)",
+                "cssVar": "--color-bg-muted",
+                "usage": [
+                    "inputs",
+                    "wells",
+                    "code blocks"
+                ]
+            }
+        },
+        "text": {
+            "primary": {
+                "value": "#18181B",
+                "rgb": "rgb(24, 24, 27)",
+                "hsl": "hsl(240, 6%, 10%)",
+                "cssVar": "--color-text",
+                "contrastRatio": "19.4:1",
+                "wcagLevel": "AAA",
+                "usage": [
+                    "headings",
+                    "body text",
+                    "primary content"
+                ]
+            },
+            "secondary": {
+                "value": "#52525B",
+                "rgb": "rgb(82, 82, 91)",
+                "hsl": "hsl(240, 5%, 34%)",
+                "cssVar": "--color-text-secondary",
+                "contrastRatio": "7.5:1",
+                "wcagLevel": "AAA",
+                "usage": [
+                    "labels",
+                    "descriptions"
+                ]
+            },
+            "tertiary": {
+                "value": "#A1A1AA",
+                "rgb": "rgb(161, 161, 170)",
+                "hsl": "hsl(240, 5%, 65%)",
+                "cssVar": "--color-text-tertiary",
+                "contrastRatio": "3.4:1",
+                "wcagLevel": "FAIL",
+                "usage": [
+                    "placeholders",
+                    "hints"
+                ],
+                "accessibilityNote": "Fails WCAG AA - recommend #717179"
+            },
+            "disabled": {
+                "value": "#A1A1AA",
+                "rgb": "rgb(161, 161, 170)",
+                "contrastRatio": "3.4:1",
+                "wcagLevel": "FAIL",
+                "usage": [
+                    "disabled text"
+                ]
+            }
+        },
+        "border": {
+            "default": {
+                "value": "#E4E4E7",
+                "rgb": "rgb(228, 228, 231)",
+                "cssVar": "--color-border",
+                "usage": [
+                    "input borders",
+                    "card borders"
+                ]
+            },
+            "subtle": {
+                "value": "#F4F4F5",
+                "rgb": "rgb(244, 244, 245)",
+                "cssVar": "--color-border-subtle",
+                "usage": [
+                    "subtle separators"
+                ]
+            },
+            "strong": {
+                "value": "#D4D4D8",
+                "rgb": "rgb(212, 212, 216)",
+                "usage": [
+                    "focus borders"
+                ]
+            }
+        },
+        "brand": {
+            "50": {
+                "value": "#E8F7FA",
+                "rgb": "rgb(232, 247, 250)",
+                "usage": [
+                    "hover backgrounds"
+                ]
+            },
+            "100": {
+                "value": "#D1EFF5",
+                "rgb": "rgb(209, 239, 245)",
+                "usage": [
+                    "badge backgrounds"
+                ]
+            },
+            "200": {
+                "value": "#A3DFEB",
+                "rgb": "rgb(163, 223, 235)",
+                "usage": [
+                    "light accents"
+                ]
+            },
+            "300": {
+                "value": "#75CFE1",
+                "rgb": "rgb(117, 207, 225)",
+                "usage": [
+                    "decorative"
+                ]
+            },
+            "400": {
+                "value": "#47BFD7",
+                "rgb": "rgb(71, 191, 215)",
+                "usage": [
+                    "hover buttons"
+                ]
+            },
+            "500": {
+                "value": "#1E8AAD",
+                "rgb": "rgb(30, 138, 173)",
+                "usage": [
+                    "primary buttons",
+                    "links"
+                ]
+            },
+            "600": {
+                "value": "#186E8A",
+                "rgb": "rgb(24, 110, 138)",
+                "usage": [
+                    "active states"
+                ]
+            },
+            "700": {
+                "value": "#125268",
+                "rgb": "rgb(18, 82, 104)",
+                "usage": [
+                    "pressed states"
+                ]
+            },
+            "800": {
+                "value": "#0C3745",
+                "rgb": "rgb(12, 55, 69)",
+                "usage": [
+                    "dark accents"
+                ]
+            },
+            "900": {
+                "value": "#061B23",
+                "rgb": "rgb(6, 27, 35)",
+                "usage": [
+                    "darkest"
+                ]
+            },
+            "950": {
+                "value": "#030E12",
+                "rgb": "rgb(3, 14, 18)",
+                "usage": [
+                    "near black"
+                ]
+            }
+        },
+        "semantic": {
+            "success": {
+                "50": {
+                    "value": "#ECFDF5"
+                },
+                "100": {
+                    "value": "#D1FAE5"
+                },
+                "200": {
+                    "value": "#A7F3D0"
+                },
+                "300": {
+                    "value": "#6EE7B7"
+                },
+                "400": {
+                    "value": "#34D399"
+                },
+                "500": {
+                    "value": "#10B981"
+                },
+                "600": {
+                    "value": "#059669"
+                },
+                "700": {
+                    "value": "#047857"
+                },
+                "800": {
+                    "value": "#065F46"
+                },
+                "900": {
+                    "value": "#064E3B"
+                }
+            },
+            "warning": {
+                "50": {
+                    "value": "#FFFBEB"
+                },
+                "100": {
+                    "value": "#FEF3C7"
+                },
+                "200": {
+                    "value": "#FDE68A"
+                },
+                "300": {
+                    "value": "#FCD34D"
+                },
+                "400": {
+                    "value": "#FBBF24"
+                },
+                "500": {
+                    "value": "#F59E0B"
+                },
+                "600": {
+                    "value": "#D97706"
+                },
+                "700": {
+                    "value": "#B45309"
+                },
+                "800": {
+                    "value": "#92400E"
+                },
+                "900": {
+                    "value": "#78350F"
+                }
+            },
+            "danger": {
+                "50": {
+                    "value": "#FEF2F2"
+                },
+                "100": {
+                    "value": "#FEE2E2"
+                },
+                "200": {
+                    "value": "#FECACA"
+                },
+                "300": {
+                    "value": "#FCA5A5"
+                },
+                "400": {
+                    "value": "#F87171"
+                },
+                "500": {
+                    "value": "#EF4444"
+                },
+                "600": {
+                    "value": "#DC2626"
+                },
+                "700": {
+                    "value": "#B91C1C"
+                },
+                "800": {
+                    "value": "#991B1B"
+                },
+                "900": {
+                    "value": "#7F1D1D"
+                }
+            }
+        },
+        "neutral": {
+            "50": {
+                "value": "#FAFAFA"
+            },
+            "100": {
+                "value": "#F4F4F5"
+            },
+            "200": {
+                "value": "#E4E4E7"
+            },
+            "300": {
+                "value": "#D4D4D8"
+            },
+            "400": {
+                "value": "#A1A1AA"
+            },
+            "500": {
+                "value": "#71717A"
+            },
+            "600": {
+                "value": "#52525B"
+            },
+            "700": {
+                "value": "#3F3F46"
+            },
+            "800": {
+                "value": "#27272A"
+            },
+            "900": {
+                "value": "#18181B"
+            },
+            "950": {
+                "value": "#09090B"
+            }
+        },
+        "interactive": {
+            "hover": {
+                "value": "#F4F4F5"
+            },
+            "pressed": {
+                "value": "#E4E4E7"
+            },
+            "focus": {
+                "value": "#1E8AAD",
+                "ringOffset": "#FFFFFF"
+            }
+        },
+        "overlay": {
+            "default": {
+                "value": "rgba(0, 0, 0, 0.5)"
+            }
+        }
+    },
+    "shadows": {
+        "soft": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+        "medium": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)",
+        "strong": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
+        "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+        "innerSoft": "inset 0 1px 2px 0 rgba(0, 0, 0, 0.05)"
+    },
+    "effects": {
+        "glass": {
+            "background": "rgba(255, 255, 255, 0.8)",
+            "blur": "16px"
+        },
+        "glassStrong": {
+            "background": "rgba(255, 255, 255, 0.95)",
+            "blur": "24px"
+        },
+        "selection": {
+            "background": "rgba(30, 138, 173, 0.3)"
+        },
+        "scrollbar": {
+            "thumb": "#D4D4D8",
+            "thumbHover": "#A1A1AA"
+        }
+    }
+}

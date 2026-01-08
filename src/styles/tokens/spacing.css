@@ -1,0 +1,98 @@
+/* ============================================
+   DESIGN TOKENS - SPACING
+   Mãos Amigas Design System v2.0
+   ============================================ */
+
+:root {
+    /* ===========================================
+     SPACING SCALE (4px base)
+     =========================================== */
+    --space-0: 0;
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px */
+    --space-5: 1.25rem;
+    /* 20px */
+    --space-6: 1.5rem;
+    /* 24px */
+    --space-8: 2rem;
+    /* 32px */
+    --space-10: 2.5rem;
+    /* 40px */
+    --space-12: 3rem;
+    /* 48px */
+    --space-16: 4rem;
+    /* 64px */
+    --space-20: 5rem;
+    /* 80px */
+    --space-24: 6rem;
+    /* 96px */
+    --space-32: 8rem;
+    /* 128px */
+
+    /* ===========================================
+     TOUCH TARGETS (Accessibility)
+     WCAG 2.2 requires minimum 44px
+     =========================================== */
+    --touch-target: 44px;
+    /* Minimum - WCAG compliant */
+    --touch-target-lg: 48px;
+    /* Comfortable */
+    --touch-target-xl: 56px;
+    /* Large CTAs */
+
+    /* ===========================================
+     COMPONENT SPACING
+     =========================================== */
+    --component-padding-xs: var(--space-2);
+    /* 8px */
+    --component-padding-sm: var(--space-3);
+    /* 12px */
+    --component-padding-md: var(--space-4);
+    /* 16px */
+    --component-padding-lg: var(--space-6);
+    /* 24px */
+    --component-padding-xl: var(--space-8);
+    /* 32px */
+
+    /* ===========================================
+     GAP SYSTEM
+     =========================================== */
+    --gap-xs: var(--space-1);
+    /* 4px */
+    --gap-sm: var(--space-2);
+    /* 8px */
+    --gap-md: var(--space-4);
+    /* 16px */
+    --gap-lg: var(--space-6);
+    /* 24px */
+    --gap-xl: var(--space-8);
+    /* 32px */
+
+    /* ===========================================
+     CONTAINER WIDTHS
+     =========================================== */
+    --container-xs: 375px;
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1536px;
+    --container-narrow: 512px;
+    --container-prose: 65ch;
+}
+
+/* ===========================================
+   SAFE AREA INSETS (Mobile PWA)
+   =========================================== */
+:root {
+    --safe-area-top: env(safe-area-inset-top, 0px);
+    --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-area-left: env(safe-area-inset-left, 0px);
+    --safe-area-right: env(safe-area-inset-right, 0px);
+}

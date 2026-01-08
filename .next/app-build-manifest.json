@@ -1,0 +1,155 @@
+{
+  "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/(auth)/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(auth)/login/page.js"
+    ],
+    "/(admin)/usuarios/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/usuarios/page.js"
+    ],
+    "/(portals)/cliente/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/page.js"
+    ],
+    "/(portals)/cliente/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/layout.js"
+    ],
+    "/(portals)/cliente/paciente/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/paciente/page.js"
+    ],
+    "/(portals)/cliente/agenda/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/agenda/page.js"
+    ],
+    "/(portals)/cliente/mensagens/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/mensagens/page.js"
+    ],
+    "/(portals)/pro/cuidador/relatorios/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/cuidador/relatorios/page.js"
+    ],
+    "/(portals)/pro/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/layout.js"
+    ],
+    "/(auth)/registro/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(auth)/registro/page.js"
+    ],
+    "/(portals)/admin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/admin/page.js"
+    ],
+    "/(portals)/admin/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/admin/layout.js"
+    ],
+    "/(portals)/pro/cuidador/mensagens/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/cuidador/mensagens/page.js"
+    ],
+    "/(portals)/pro/enfermeiro/procedimentos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/enfermeiro/procedimentos/page.js"
+    ],
+    "/(portals)/pro/enfermeiro/mensagens/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/enfermeiro/mensagens/page.js"
+    ],
+    "/(portals)/pro/cuidador/pacientes/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/cuidador/pacientes/page.js"
+    ],
+    "/(portals)/pro/cuidador/agenda/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/cuidador/agenda/page.js"
+    ],
+    "/(portals)/pro/cuidador/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/cuidador/page.js"
+    ],
+    "/(portals)/pro/cuidador/perfil/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/pro/cuidador/perfil/page.js"
+    ],
+    "/(portals)/cliente/paciente/evolucao/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/paciente/evolucao/page.js"
+    ],
+    "/(portals)/cliente/paciente/medicamentos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/paciente/medicamentos/page.js"
+    ],
+    "/(portals)/cliente/paciente/saude/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/paciente/saude/page.js"
+    ],
+    "/(portals)/cliente/paciente/exames/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/paciente/exames/page.js"
+    ],
+    "/(portals)/cliente/profissionais/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/profissionais/page.js"
+    ],
+    "/(portals)/cliente/documentos/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/documentos/page.js"
+    ],
+    "/(portals)/cliente/financeiro/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/financeiro/page.js"
+    ],
+    "/(portals)/cliente/mais/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(portals)/cliente/mais/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ]
+  }
+}

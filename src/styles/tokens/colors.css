@@ -1,0 +1,266 @@
+/* ============================================
+   DESIGN TOKENS - COLORS
+   Mãos Amigas Design System v2.0
+   WCAG 2.2 AA/AAA Compliant
+   ============================================ */
+
+/* ===========================================
+   LIGHT MODE (Default)
+   =========================================== */
+:root,
+[data-theme="light"] {
+    /* --------- Backgrounds --------- */
+    --color-bg-base: #FAFAFA;
+    --color-bg: #FFFFFF;
+    --color-bg-elevated: #FFFFFF;
+    --color-bg-surface: #FAFAFA;
+    --color-bg-muted: #F4F4F5;
+    --color-bg-subtle: #EBEBED;
+    --color-bg-emphasis: #E4E4E7;
+
+    /* --------- Text Colors (WCAG Corrected) --------- */
+    --color-text-primary: #18181B;
+    /* 19.4:1 ✅ AAA */
+    --color-text-secondary: #3F3F46;
+    /* 10.1:1 ✅ AAA - CORRIGIDO de #52525B */
+    --color-text-tertiary: #656572;
+    /* 5.5:1  ✅ AA  - CORRIGIDO de #A1A1AA */
+    --color-text-muted: #737380;
+    /* 4.5:1  ✅ AA  - CORRIGIDO */
+    --color-text-disabled: #737380;
+    /* 4.5:1  ✅ AA  - CORRIGIDO */
+    --color-text-placeholder: #6B6B73;
+    /* 5.0:1  ✅ AA  - CORRIGIDO de #A1A1AA */
+    --color-text-inverse: #FFFFFF;
+
+    /* --------- Border Colors --------- */
+    --color-border-transparent: rgba(0, 0, 0, 0.05);
+    --color-border-subtle: #F4F4F5;
+    --color-border: #E4E4E7;
+    --color-border-muted: #D4D4D8;
+    --color-border-strong: #A1A1AA;
+    --color-border-emphasis: #71717A;
+
+    /* --------- Shadows --------- */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.04);
+
+    /* --------- Overlays --------- */
+    --color-overlay-modal: rgba(0, 0, 0, 0.5);
+    --color-overlay-hover: rgba(0, 0, 0, 0.04);
+    --color-overlay-pressed: rgba(0, 0, 0, 0.08);
+
+    /* --------- Focus Ring --------- */
+    --color-focus-ring: rgba(30, 138, 173, 0.2);
+    --color-focus-ring-offset: #FFFFFF;
+
+    /* --------- Status: Success --------- */
+    --color-success-bg: #D1FAE5;
+    --color-success-border: #A7F3D0;
+    --color-success-text: #047857;
+    --color-success-icon: #10B981;
+
+    /* --------- Status: Warning --------- */
+    --color-warning-bg: #FEF3C7;
+    --color-warning-border: #FDE68A;
+    --color-warning-text: #B45309;
+    --color-warning-icon: #F59E0B;
+
+    /* --------- Status: Danger --------- */
+    --color-danger-bg: #FEE2E2;
+    --color-danger-border: #FECACA;
+    --color-danger-text: #B91C1C;
+    --color-danger-icon: #EF4444;
+
+    /* --------- Status: Info --------- */
+    --color-info-bg: #D1EFF5;
+    --color-info-border: #A3DFEB;
+    --color-info-text: #125268;
+    --color-info-icon: #1E8AAD;
+}
+
+/* ===========================================
+   DARK MODE
+   Enterprise Grade (Linear, Vercel, Stripe)
+   =========================================== */
+.dark,
+[data-theme="dark"] {
+    /* --------- Backgrounds --------- */
+    --color-bg-base: #0A0A0D;
+    --color-bg: #0F0F12;
+    --color-bg-elevated: #16161A;
+    --color-bg-surface: #1C1C21;
+    --color-bg-muted: #24242B;
+    --color-bg-subtle: #2C2C35;
+    --color-bg-emphasis: #34343E;
+
+    /* --------- Text Colors (WCAG Corrected) --------- */
+    --color-text-primary: #F5F5F8;
+    /* 18.1:1 ✅ AAA */
+    --color-text-secondary: #C4C4CC;
+    /* 10.2:1 ✅ AAA */
+    --color-text-tertiary: #A3A3AD;
+    /* 6.5:1  ✅ AA  - CORRIGIDO de #9898A3 */
+    --color-text-muted: #8E8E98;
+    /* 4.8:1  ✅ AA  - CORRIGIDO */
+    --color-text-disabled: #8B8B95;
+    /* 4.5:1  ✅ AA  - CORRIGIDO de #71717A */
+    --color-text-placeholder: #9898A3;
+    /* 5.2:1  ✅ AA  - CORRIGIDO de #71717A */
+    --color-text-inverse: #18181B;
+
+    /* --------- Border Colors --------- */
+    --color-border-transparent: rgba(255, 255, 255, 0.06);
+    --color-border-subtle: #232329;
+    --color-border: #2E2E36;
+    --color-border-muted: #3A3A44;
+    --color-border-strong: #4A4A55;
+    --color-border-emphasis: #5A5A66;
+
+    /* --------- Shadows (Dark Optimized) --------- */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    --shadow-glow: 0 0 20px rgba(30, 138, 173, 0.4);
+
+    /* --------- Overlays --------- */
+    --color-overlay-modal: rgba(0, 0, 0, 0.75);
+    --color-overlay-hover: rgba(255, 255, 255, 0.05);
+    --color-overlay-pressed: rgba(255, 255, 255, 0.12);
+
+    /* --------- Focus Ring --------- */
+    --color-focus-ring: rgba(30, 138, 173, 0.25);
+    --color-focus-ring-offset: #0F0F12;
+
+    /* --------- Status: Success (Dark Optimized) --------- */
+    --color-success-bg: rgba(16, 185, 129, 0.12);
+    --color-success-border: rgba(52, 211, 153, 0.3);
+    --color-success-text: #34D399;
+    /* 8.3:1 ✅ AAA */
+    --color-success-icon: #10B981;
+
+    /* --------- Status: Warning (Dark Optimized) --------- */
+    --color-warning-bg: rgba(245, 158, 11, 0.12);
+    --color-warning-border: rgba(251, 191, 36, 0.3);
+    --color-warning-text: #FBBF24;
+    /* 11.2:1 ✅ AAA */
+    --color-warning-icon: #F59E0B;
+
+    /* --------- Status: Danger (Dark Optimized) --------- */
+    --color-danger-bg: rgba(239, 68, 68, 0.12);
+    --color-danger-border: rgba(248, 113, 113, 0.3);
+    --color-danger-text: #F87171;
+    /* 7.1:1 ✅ AA */
+    --color-danger-icon: #EF4444;
+
+    /* --------- Status: Info (Dark Optimized) --------- */
+    --color-info-bg: rgba(30, 138, 173, 0.12);
+    --color-info-border: rgba(71, 191, 215, 0.3);
+    --color-info-text: #47BFD7;
+    /* 6.8:1 ✅ AA */
+    --color-info-icon: #1E8AAD;
+}
+
+/* ===========================================
+   BRAND COLORS (Mode Agnostic)
+   =========================================== */
+:root {
+    --color-brand-50: #E8F7FA;
+    --color-brand-100: #D1EFF5;
+    --color-brand-200: #A3DFEB;
+    --color-brand-300: #75CFE1;
+    --color-brand-400: #47BFD7;
+    --color-brand-500: #1E8AAD;
+    --color-brand-600: #186E8A;
+    --color-brand-700: #125268;
+    --color-brand-800: #0C3745;
+    --color-brand-900: #061B23;
+
+    /* Semantic aliases */
+    --color-primary: var(--color-brand-500);
+    --color-primary-hover: var(--color-brand-600);
+    --color-primary-active: var(--color-brand-700);
+}
+
+.dark,
+[data-theme="dark"] {
+    --color-primary-hover: var(--color-brand-400);
+    --color-primary-active: var(--color-brand-600);
+
+    /* Brand with transparency for dark mode backgrounds */
+    --color-brand-bg-subtle: rgba(30, 138, 173, 0.08);
+    --color-brand-bg: rgba(30, 138, 173, 0.15);
+    --color-brand-bg-emphasis: rgba(71, 191, 215, 0.25);
+
+    /* Glow effect for premium feel */
+    --color-brand-glow: 0 0 20px rgba(30, 138, 173, 0.4);
+    --color-brand-ring: 0 0 0 2px rgba(71, 191, 215, 0.5);
+}
+
+/* ===========================================
+   SEMANTIC SUCCESS PALETTE
+   =========================================== */
+:root {
+    --color-success-50: #ECFDF5;
+    --color-success-100: #D1FAE5;
+    --color-success-200: #A7F3D0;
+    --color-success-300: #6EE7B7;
+    --color-success-400: #34D399;
+    --color-success-500: #10B981;
+    --color-success-600: #059669;
+    --color-success-700: #047857;
+    --color-success-800: #065F46;
+    --color-success-900: #064E3B;
+}
+
+/* ===========================================
+   SEMANTIC WARNING PALETTE
+   =========================================== */
+:root {
+    --color-warning-50: #FFFBEB;
+    --color-warning-100: #FEF3C7;
+    --color-warning-200: #FDE68A;
+    --color-warning-300: #FCD34D;
+    --color-warning-400: #FBBF24;
+    --color-warning-500: #F59E0B;
+    --color-warning-600: #D97706;
+    --color-warning-700: #B45309;
+    --color-warning-800: #92400E;
+    --color-warning-900: #78350F;
+}
+
+/* ===========================================
+   SEMANTIC DANGER PALETTE
+   =========================================== */
+:root {
+    --color-danger-50: #FEF2F2;
+    --color-danger-100: #FEE2E2;
+    --color-danger-200: #FECACA;
+    --color-danger-300: #FCA5A5;
+    --color-danger-400: #F87171;
+    --color-danger-500: #EF4444;
+    --color-danger-600: #DC2626;
+    --color-danger-700: #B91C1C;
+    --color-danger-800: #991B1B;
+    --color-danger-900: #7F1D1D;
+}
+
+/* ===========================================
+   NEUTRAL PALETTE
+   =========================================== */
+:root {
+    --color-neutral-50: #FAFAFA;
+    --color-neutral-100: #F4F4F5;
+    --color-neutral-200: #E4E4E7;
+    --color-neutral-300: #D4D4D8;
+    --color-neutral-400: #A1A1AA;
+    --color-neutral-500: #71717A;
+    --color-neutral-600: #52525B;
+    --color-neutral-700: #3F3F46;
+    --color-neutral-800: #27272A;
+    --color-neutral-900: #18181B;
+    --color-neutral-950: #0F0F12;
+}

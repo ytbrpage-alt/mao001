@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Preview - Mãos Amigas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+        }
+        
+        .panel {
+            padding: 2rem;
+        }
+        
+        /* Light Mode Panel */
+        .light-panel {
+            background: #FFFFFF;
+            color: #18181B;
+        }
+        
+        /* Dark Mode Panel */
+        .dark-panel {
+            background: #0F0F12;
+            color: #F5F5F8;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid;
+        }
+        
+        .light-panel .section-title { border-color: #E4E4E7; }
+        .dark-panel .section-title { border-color: #2E2E36; }
+        
+        /* Color Swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .color-swatch {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .color-preview {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .color-info {
+            padding: 0.5rem;
+            font-size: 0.75rem;
+        }
+        
+        .light-panel .color-info { background: #F4F4F5; }
+        .dark-panel .color-info { background: #16161A; }
+        
+        /* Background Colors */
+        .bg-light-base { background: #FFFFFF; border: 1px solid #E4E4E7; color: #18181B; }
+        .bg-light-elevated { background: #FFFFFF; border: 1px solid #E4E4E7; color: #18181B; }
+        .bg-light-surface { background: #FAFAFA; color: #18181B; }
+        .bg-light-muted { background: #F4F4F5; color: #18181B; }
+        
+        .bg-dark-base { background: #0F0F12; color: #F5F5F8; }
+        .bg-dark-elevated { background: #16161A; color: #F5F5F8; }
+        .bg-dark-surface { background: #1C1C21; color: #F5F5F8; }
+        .bg-dark-muted { background: #24242B; color: #F5F5F8; }
+        
+        /* Brand Colors */
+        .brand-50 { background: #E8F7FA; color: #125268; }
+        .brand-100 { background: #D1EFF5; color: #125268; }
+        .brand-200 { background: #A3DFEB; color: #125268; }
+        .brand-300 { background: #75CFE1; color: #0C3745; }
+        .brand-400 { background: #47BFD7; color: #0C3745; }
+        .brand-500 { background: #1E8AAD; color: #FFFFFF; }
+        .brand-600 { background: #186E8A; color: #FFFFFF; }
+        .brand-700 { background: #125268; color: #FFFFFF; }
+        
+        /* Semantic Colors */
+        .success-light { background: #D1FAE5; color: #047857; }
+        .success-dark { background: rgba(16, 185, 129, 0.15); color: #34D399; }
+        .warning-light { background: #FEF3C7; color: #B45309; }
+        .warning-dark { background: rgba(245, 158, 11, 0.15); color: #FBBF24; }
+        .danger-light { background: #FEE2E2; color: #B91C1C; }
+        .danger-dark { background: rgba(239, 68, 68, 0.15); color: #F87171; }
+        .info-light { background: #D1EFF5; color: #125268; }
+        .info-dark { background: rgba(30, 138, 173, 0.15); color: #47BFD7; }
+        
+        /* Text Colors */
+        .text-sample {
+            padding: 0.5rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .light-panel .text-primary { color: #18181B; }
+        .light-panel .text-secondary { color: #52525B; }
+        .light-panel .text-tertiary { color: #A1A1AA; }
+        
+        .dark-panel .text-primary { color: #F5F5F8; }
+        .dark-panel .text-secondary { color: #C4C4CC; }
+        .dark-panel .text-tertiary { color: #9898A3; }
+        
+        /* Buttons */
+        .button-row {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            padding: 0.625rem 1.25rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: none;
+            cursor: pointer;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-primary {
+            background: #1E8AAD;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #47BFD7;
+        }
+        
+        .light-panel .btn-secondary {
+            background: #F4F4F5;
+            color: #18181B;
+        }
+        
+        .dark-panel .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #F5F5F8;
+        }
+        
+        .light-panel .btn-ghost {
+            background: transparent;
+            color: #52525B;
+        }
+        
+        .dark-panel .btn-ghost {
+            background: transparent;
+            color: #A1A1AA;
+        }
+        
+        .btn-danger {
+            background: #EF4444;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #10B981;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #1E8AAD;
+            color: #1E8AAD;
+        }
+        
+        .dark-panel .btn-outline {
+            color: #47BFD7;
+        }
+        
+        /* Inputs */
+        .input-group {
+            margin-bottom: 1rem;
+        }
+        
+        .input-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.375rem;
+        }
+        
+        .light-panel .input-label { color: #52525B; }
+        .dark-panel .input-label { color: #C4C4CC; }
+        
+        .input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            min-height: 48px;
+        }
+        
+        .light-panel .input {
+            background: #FFFFFF;
+            border: 1px solid #D4D4D8;
+            color: #18181B;
+        }
+        
+        .light-panel .input::placeholder { color: #A1A1AA; }
+        
+        .dark-panel .input {
+            background: #16161A;
+            border: 1px solid #2E2E36;
+            color: #F5F5F8;
+        }
+        
+        .dark-panel .input::placeholder { color: #71717A; }
+        
+        .input:focus {
+            outline: none;
+            border-color: #1E8AAD;
+            box-shadow: 0 0 0 3px rgba(30, 138, 173, 0.15);
+        }
+        
+        .input-error {
+            border-color: #EF4444 !important;
+        }
+        
+        .input-success {
+            border-color: #10B981 !important;
+        }
+        
+        /* Cards */
+        .card {
+            border-radius: 16px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .light-panel .card {
+            background: #FFFFFF;
+            border: 1px solid #E4E4E7;
+        }
+        
+        .dark-panel .card {
+            background: #16161A;
+            border: 1px solid #232329;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
+        }
+        
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .card-subtitle {
+            font-size: 0.875rem;
+        }
+        
+        .light-panel .card-subtitle { color: #71717A; }
+        .dark-panel .card-subtitle { color: #9898A3; }
+        
+        /* Badges */
+        .badge-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .badge {
+            padding: 0.25rem 0.625rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        /* Typography Preview */
+        .typography-preview {
+            margin-bottom: 1.5rem;
+        }
+        
+        .typo-h1 { font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .typo-h2 { font-size: 1.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .typo-h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .typo-h4 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .typo-body { font-size: 1rem; margin-bottom: 0.5rem; }
+        .typo-small { font-size: 0.875rem; margin-bottom: 0.5rem; }
+        .typo-caption { font-size: 0.75rem; }
+        
+        /* Accessibility Warning */
+        .a11y-warning {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .light-panel .a11y-warning {
+            background: #FEF3C7;
+            border: 1px solid #F59E0B;
+        }
+        
+        .dark-panel .a11y-warning {
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        
+        .a11y-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .light-panel .a11y-title { color: #B45309; }
+        .dark-panel .a11y-title { color: #FBBF24; }
+        
+        /* Shadows Preview */
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        
+        .shadow-box {
+            height: 80px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+        }
+        
+        .light-panel .shadow-box { background: #FFFFFF; }
+        .dark-panel .shadow-box { background: #16161A; }
+        
+        .shadow-soft { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+        .shadow-medium { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .shadow-strong { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        
+        .dark-panel .shadow-soft { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5); }
+        .dark-panel .shadow-medium { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.6); }
+        .dark-panel .shadow-strong { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7); }
+        
+        /* Header */
+        .panel-header {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid;
+        }
+        
+        .light-panel .panel-header { border-color: #E4E4E7; }
+        .dark-panel .panel-header { border-color: #2E2E36; }
+        
+        .panel-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .panel-subtitle {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+        
+        .light-panel .panel-subtitle { color: #71717A; }
+        .dark-panel .panel-subtitle { color: #9898A3; }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Light Mode Panel -->
+        <div class="panel light-panel">
+            <div class="panel-header">
+                <div class="panel-title">☀️ Light Mode</div>
+                <div class="panel-subtitle">Modo Claro</div>
+            </div>
+            
+            <!-- Background Colors -->
+            <div class="section">
+                <h2 class="section-title">Backgrounds</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview bg-light-base">Base</div>
+                        <div class="color-info">#FFFFFF</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview bg-light-surface">Surface</div>
+                        <div class="color-info">#FAFAFA</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview bg-light-muted">Muted</div>
+                        <div class="color-info">#F4F4F5</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brand Colors -->
+            <div class="section">
+                <h2 class="section-title">Brand Palette</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview brand-50">50</div>
+                        <div class="color-info">#E8F7FA</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-100">100</div>
+                        <div class="color-info">#D1EFF5</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-400">400</div>
+                        <div class="color-info">#47BFD7</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-500">500</div>
+                        <div class="color-info">#1E8AAD</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-600">600</div>
+                        <div class="color-info">#186E8A</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-700">700</div>
+                        <div class="color-info">#125268</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Semantic Colors -->
+            <div class="section">
+                <h2 class="section-title">Status Colors</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview success-light">Success</div>
+                        <div class="color-info">#D1FAE5</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview warning-light">Warning</div>
+                        <div class="color-info">#FEF3C7</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview danger-light">Danger</div>
+                        <div class="color-info">#FEE2E2</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview info-light">Info</div>
+                        <div class="color-info">#D1EFF5</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text Colors -->
+            <div class="section">
+                <h2 class="section-title">Text Colors</h2>
+                <div class="text-sample text-primary">Primary Text - #18181B (19.4:1 ✅)</div>
+                <div class="text-sample text-secondary">Secondary Text - #52525B (7.5:1 ✅)</div>
+                <div class="text-sample text-tertiary">Tertiary Text - #A1A1AA (3.4:1 ⚠️)</div>
+            </div>
+            
+            <!-- Typography -->
+            <div class="section">
+                <h2 class="section-title">Typography</h2>
+                <div class="typography-preview">
+                    <div class="typo-h1">H1 - 36px Bold</div>
+                    <div class="typo-h2">H2 - 30px Semibold</div>
+                    <div class="typo-h3">H3 - 24px Semibold</div>
+                    <div class="typo-h4">H4 - 20px Semibold</div>
+                    <div class="typo-body">Body - 16px Regular</div>
+                    <div class="typo-small text-secondary">Small - 14px Regular</div>
+                    <div class="typo-caption text-tertiary">Caption - 12px Regular</div>
+                </div>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="section">
+                <h2 class="section-title">Buttons</h2>
+                <div class="button-row">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-ghost">Ghost</button>
+                </div>
+                <div class="button-row">
+                    <button class="btn btn-danger">Danger</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-outline">Outline</button>
+                </div>
+            </div>
+            
+            <!-- Inputs -->
+            <div class="section">
+                <h2 class="section-title">Inputs</h2>
+                <div class="input-group">
+                    <label class="input-label">Default Input</label>
+                    <input type="text" class="input" placeholder="Digite algo...">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Error State</label>
+                    <input type="text" class="input input-error" value="Valor inválido">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Success State</label>
+                    <input type="text" class="input input-success" value="Valor válido">
+                </div>
+            </div>
+            
+            <!-- Cards -->
+            <div class="section">
+                <h2 class="section-title">Cards</h2>
+                <div class="card">
+                    <div class="card-title">Card Title</div>
+                    <div class="card-subtitle">Subtitle or description text goes here</div>
+                </div>
+            </div>
+            
+            <!-- Badges -->
+            <div class="section">
+                <h2 class="section-title">Badges</h2>
+                <div class="badge-row">
+                    <span class="badge success-light">Success</span>
+                    <span class="badge warning-light">Warning</span>
+                    <span class="badge danger-light">Danger</span>
+                    <span class="badge info-light">Info</span>
+                </div>
+            </div>
+            
+            <!-- Shadows -->
+            <div class="section">
+                <h2 class="section-title">Shadows</h2>
+                <div class="shadow-grid">
+                    <div class="shadow-box shadow-soft">Soft</div>
+                    <div class="shadow-box shadow-medium">Medium</div>
+                    <div class="shadow-box shadow-strong">Strong</div>
+                </div>
+            </div>
+            
+            <!-- Accessibility Warning -->
+            <div class="a11y-warning">
+                <div class="a11y-title">⚠️ Problemas de Contraste</div>
+                <div style="font-size: 0.875rem;">
+                    <strong>text-tertiary:</strong> #A1A1AA tem ratio 3.4:1 (mínimo 4.5:1)<br>
+                    <strong>Sugestão:</strong> Usar #717179 (ratio 4.6:1)
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dark Mode Panel -->
+        <div class="panel dark-panel">
+            <div class="panel-header">
+                <div class="panel-title">🌙 Dark Mode</div>
+                <div class="panel-subtitle">Modo Noturno</div>
+            </div>
+            
+            <!-- Background Colors -->
+            <div class="section">
+                <h2 class="section-title">Backgrounds</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview bg-dark-base">Base</div>
+                        <div class="color-info">#0F0F12</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview bg-dark-elevated">Elevated</div>
+                        <div class="color-info">#16161A</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview bg-dark-surface">Surface</div>
+                        <div class="color-info">#1C1C21</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview bg-dark-muted">Muted</div>
+                        <div class="color-info">#24242B</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Brand Colors -->
+            <div class="section">
+                <h2 class="section-title">Brand Palette</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background: rgba(30, 138, 173, 0.1); color: #47BFD7;">50</div>
+                        <div class="color-info">10% opacity</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background: rgba(30, 138, 173, 0.15); color: #47BFD7;">100</div>
+                        <div class="color-info">15% opacity</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-400">400</div>
+                        <div class="color-info">#47BFD7</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-500">500</div>
+                        <div class="color-info">#1E8AAD</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-600">600</div>
+                        <div class="color-info">#186E8A</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview brand-700">700</div>
+                        <div class="color-info">#125268</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Semantic Colors -->
+            <div class="section">
+                <h2 class="section-title">Status Colors</h2>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview success-dark">Success</div>
+                        <div class="color-info">15% opacity</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview warning-dark">Warning</div>
+                        <div class="color-info">15% opacity</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview danger-dark">Danger</div>
+                        <div class="color-info">15% opacity</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview info-dark">Info</div>
+                        <div class="color-info">15% opacity</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text Colors -->
+            <div class="section">
+                <h2 class="section-title">Text Colors</h2>
+                <div class="text-sample text-primary">Primary Text - #F5F5F8 (18.1:1 ✅)</div>
+                <div class="text-sample text-secondary">Secondary Text - #C4C4CC (10.2:1 ✅)</div>
+                <div class="text-sample text-tertiary">Tertiary Text - #9898A3 (5.8:1 ✅)</div>
+            </div>
+            
+            <!-- Typography -->
+            <div class="section">
+                <h2 class="section-title">Typography</h2>
+                <div class="typography-preview">
+                    <div class="typo-h1">H1 - 36px Bold</div>
+                    <div class="typo-h2">H2 - 30px Semibold</div>
+                    <div class="typo-h3">H3 - 24px Semibold</div>
+                    <div class="typo-h4">H4 - 20px Semibold</div>
+                    <div class="typo-body">Body - 16px Regular</div>
+                    <div class="typo-small text-secondary">Small - 14px Regular</div>
+                    <div class="typo-caption text-tertiary">Caption - 12px Regular</div>
+                </div>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="section">
+                <h2 class="section-title">Buttons</h2>
+                <div class="button-row">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-ghost">Ghost</button>
+                </div>
+                <div class="button-row">
+                    <button class="btn btn-danger">Danger</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-outline">Outline</button>
+                </div>
+            </div>
+            
+            <!-- Inputs -->
+            <div class="section">
+                <h2 class="section-title">Inputs</h2>
+                <div class="input-group">
+                    <label class="input-label">Default Input</label>
+                    <input type="text" class="input" placeholder="Digite algo...">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Error State</label>
+                    <input type="text" class="input input-error" value="Valor inválido">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Success State</label>
+                    <input type="text" class="input input-success" value="Valor válido">
+                </div>
+            </div>
+            
+            <!-- Cards -->
+            <div class="section">
+                <h2 class="section-title">Cards</h2>
+                <div class="card">
+                    <div class="card-title">Card Title</div>
+                    <div class="card-subtitle">Subtitle or description text goes here</div>
+                </div>
+            </div>
+            
+            <!-- Badges -->
+            <div class="section">
+                <h2 class="section-title">Badges</h2>
+                <div class="badge-row">
+                    <span class="badge success-dark">Success</span>
+                    <span class="badge warning-dark">Warning</span>
+                    <span class="badge danger-dark">Danger</span>
+                    <span class="badge info-dark">Info</span>
+                </div>
+            </div>
+            
+            <!-- Shadows -->
+            <div class="section">
+                <h2 class="section-title">Shadows</h2>
+                <div class="shadow-grid">
+                    <div class="shadow-box shadow-soft">Soft</div>
+                    <div class="shadow-box shadow-medium">Medium</div>
+                    <div class="shadow-box shadow-strong">Strong</div>
+                </div>
+            </div>
+            
+            <!-- Accessibility Warning -->
+            <div class="a11y-warning">
+                <div class="a11y-title">⚠️ Problemas de Contraste</div>
+                <div style="font-size: 0.875rem;">
+                    <strong>text-disabled:</strong> #71717A tem ratio 4.1:1 (mínimo 4.5:1)<br>
+                    <strong>Sugestão:</strong> Usar #8A8A94 (ratio 4.8:1)
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

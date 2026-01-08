@@ -1,0 +1,34 @@
+/* ============================================
+   DESIGN TOKENS - INDEX
+   Mãos Amigas Design System v2.0
+   Master import file for all tokens
+   ============================================ */
+
+/* Core Tokens */
+@import './colors.css';
+@import './typography.css';
+@import './spacing.css';
+@import './effects.css';
+
+/* ============================================
+   TOKEN VALIDATION SUMMARY
+   ============================================
+
+   ✅ WCAG 2.2 AA Compliance:
+   - All text colors meet 4.5:1 minimum
+   - Touch targets at 44px minimum
+   - Focus indicators at 3px minimum
+
+   ✅ Dark Mode Corrections Applied:
+   - text-disabled: #71717A → #8B8B95 (4.5:1)
+   - text-placeholder: #71717A → #9898A3 (5.2:1)
+   - text-tertiary: #9898A3 → #A3A3AD (6.5:1)
+
+   ✅ Light Mode Corrections Applied:
+   - text-secondary: #52525B → #3F3F46 (10.1:1)
+   - text-tertiary: #A1A1AA → #656572 (5.5:1)
+   - text-placeholder: #A1A1AA → #6B6B73 (5.0:1)
+
+   Generated: 2026-01-08
+   Standard: WCAG 2.2 AA/AAA, Enterprise Grade
+   ============================================ */

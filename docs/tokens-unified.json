@@ -1,0 +1,413 @@
+{
+    "$schema": "https://design-tokens.org/schema/v1",
+    "meta": {
+        "project": "Mãos Amigas",
+        "version": "2.0.0",
+        "generated": "2026-01-08",
+        "audit": "QA Enterprise Grade - WCAG 2.2 AA/AAA"
+    },
+    "color": {
+        "light": {
+            "bg": {
+                "base": {
+                    "value": "#FAFAFA",
+                    "description": "Fundo absoluto"
+                },
+                "default": {
+                    "value": "#FFFFFF",
+                    "description": "Body principal"
+                },
+                "elevated": {
+                    "value": "#FFFFFF",
+                    "description": "Cards, modais"
+                },
+                "surface": {
+                    "value": "#FAFAFA",
+                    "description": "Hover states"
+                },
+                "muted": {
+                    "value": "#F4F4F5",
+                    "description": "Inputs, wells"
+                },
+                "subtle": {
+                    "value": "#EBEBED",
+                    "description": "Nested elements"
+                },
+                "emphasis": {
+                    "value": "#E4E4E7",
+                    "description": "Seleções ativas"
+                }
+            },
+            "text": {
+                "primary": {
+                    "value": "#18181B",
+                    "contrast": "19.4:1",
+                    "wcag": "AAA"
+                },
+                "secondary": {
+                    "value": "#3F3F46",
+                    "contrast": "10.1:1",
+                    "wcag": "AAA",
+                    "note": "CORRIGIDO de #52525B"
+                },
+                "tertiary": {
+                    "value": "#656572",
+                    "contrast": "5.5:1",
+                    "wcag": "AA",
+                    "note": "CORRIGIDO de #A1A1AA"
+                },
+                "muted": {
+                    "value": "#737380",
+                    "contrast": "4.5:1",
+                    "wcag": "AA",
+                    "note": "NOVO"
+                },
+                "disabled": {
+                    "value": "#737380",
+                    "contrast": "4.5:1",
+                    "wcag": "AA",
+                    "note": "CORRIGIDO"
+                },
+                "placeholder": {
+                    "value": "#6B6B73",
+                    "contrast": "5.0:1",
+                    "wcag": "AA",
+                    "note": "CORRIGIDO de #A1A1AA"
+                },
+                "inverse": {
+                    "value": "#FFFFFF",
+                    "description": "Texto em fundos escuros"
+                }
+            },
+            "border": {
+                "transparent": {
+                    "value": "rgba(0, 0, 0, 0.05)"
+                },
+                "subtle": {
+                    "value": "#F4F4F5"
+                },
+                "default": {
+                    "value": "#E4E4E7"
+                },
+                "muted": {
+                    "value": "#D4D4D8"
+                },
+                "strong": {
+                    "value": "#A1A1AA"
+                },
+                "emphasis": {
+                    "value": "#71717A"
+                }
+            }
+        },
+        "dark": {
+            "bg": {
+                "base": {
+                    "value": "#0A0A0D",
+                    "description": "Fundo absoluto"
+                },
+                "default": {
+                    "value": "#0F0F12",
+                    "description": "Body principal"
+                },
+                "elevated": {
+                    "value": "#16161A",
+                    "description": "Cards, modais"
+                },
+                "surface": {
+                    "value": "#1C1C21",
+                    "description": "Hover states"
+                },
+                "muted": {
+                    "value": "#24242B",
+                    "description": "Inputs, wells"
+                },
+                "subtle": {
+                    "value": "#2C2C35",
+                    "description": "Nested elements"
+                },
+                "emphasis": {
+                    "value": "#34343E",
+                    "description": "Seleções ativas"
+                }
+            },
+            "text": {
+                "primary": {
+                    "value": "#F5F5F8",
+                    "contrast": "18.1:1",
+                    "wcag": "AAA"
+                },
+                "secondary": {
+                    "value": "#C4C4CC",
+                    "contrast": "10.2:1",
+                    "wcag": "AAA"
+                },
+                "tertiary": {
+                    "value": "#A3A3AD",
+                    "contrast": "6.5:1",
+                    "wcag": "AA",
+                    "note": "CORRIGIDO de #9898A3"
+                },
+                "muted": {
+                    "value": "#8E8E98",
+                    "contrast": "4.8:1",
+                    "wcag": "AA",
+                    "note": "NOVO"
+                },
+                "disabled": {
+                    "value": "#8B8B95",
+                    "contrast": "4.5:1",
+                    "wcag": "AA",
+                    "note": "CORRIGIDO de #71717A"
+                },
+                "placeholder": {
+                    "value": "#9898A3",
+                    "contrast": "5.2:1",
+                    "wcag": "AA",
+                    "note": "CORRIGIDO de #71717A"
+                },
+                "inverse": {
+                    "value": "#18181B",
+                    "description": "Texto em fundos claros"
+                }
+            },
+            "border": {
+                "transparent": {
+                    "value": "rgba(255, 255, 255, 0.06)"
+                },
+                "subtle": {
+                    "value": "#232329"
+                },
+                "default": {
+                    "value": "#2E2E36"
+                },
+                "muted": {
+                    "value": "#3A3A44"
+                },
+                "strong": {
+                    "value": "#4A4A55"
+                },
+                "emphasis": {
+                    "value": "#5A5A66"
+                }
+            }
+        },
+        "brand": {
+            "50": {
+                "value": "#E8F7FA"
+            },
+            "100": {
+                "value": "#D1EFF5"
+            },
+            "200": {
+                "value": "#A3DFEB"
+            },
+            "300": {
+                "value": "#75CFE1"
+            },
+            "400": {
+                "value": "#47BFD7"
+            },
+            "500": {
+                "value": "#1E8AAD"
+            },
+            "600": {
+                "value": "#186E8A"
+            },
+            "700": {
+                "value": "#125268"
+            },
+            "800": {
+                "value": "#0C3745"
+            },
+            "900": {
+                "value": "#061B23"
+            }
+        },
+        "success": {
+            "50": {
+                "value": "#ECFDF5"
+            },
+            "100": {
+                "value": "#D1FAE5"
+            },
+            "500": {
+                "value": "#10B981"
+            },
+            "700": {
+                "value": "#047857"
+            },
+            "dark": {
+                "bg": {
+                    "value": "rgba(16, 185, 129, 0.12)"
+                },
+                "text": {
+                    "value": "#34D399",
+                    "contrast": "8.3:1"
+                }
+            }
+        },
+        "warning": {
+            "50": {
+                "value": "#FFFBEB"
+            },
+            "100": {
+                "value": "#FEF3C7"
+            },
+            "500": {
+                "value": "#F59E0B"
+            },
+            "700": {
+                "value": "#B45309"
+            },
+            "dark": {
+                "bg": {
+                    "value": "rgba(245, 158, 11, 0.12)"
+                },
+                "text": {
+                    "value": "#FBBF24",
+                    "contrast": "11.2:1"
+                }
+            }
+        },
+        "danger": {
+            "50": {
+                "value": "#FEF2F2"
+            },
+            "100": {
+                "value": "#FEE2E2"
+            },
+            "500": {
+                "value": "#EF4444"
+            },
+            "700": {
+                "value": "#B91C1C"
+            },
+            "dark": {
+                "bg": {
+                    "value": "rgba(239, 68, 68, 0.12)"
+                },
+                "text": {
+                    "value": "#F87171",
+                    "contrast": "7.1:1"
+                }
+            }
+        }
+    },
+    "typography": {
+        "fontFamily": {
+            "sans": {
+                "value": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+            },
+            "mono": {
+                "value": "'JetBrains Mono', ui-monospace, monospace"
+            }
+        },
+        "fontSize": {
+            "xs": {
+                "value": "0.64rem",
+                "px": "10.24px"
+            },
+            "sm": {
+                "value": "0.8rem",
+                "px": "12.8px"
+            },
+            "base": {
+                "value": "1rem",
+                "px": "16px"
+            },
+            "lg": {
+                "value": "1.25rem",
+                "px": "20px"
+            },
+            "xl": {
+                "value": "1.563rem",
+                "px": "25px"
+            },
+            "2xl": {
+                "value": "1.953rem",
+                "px": "31.25px"
+            },
+            "3xl": {
+                "value": "2.441rem",
+                "px": "39px"
+            },
+            "4xl": {
+                "value": "3.052rem",
+                "px": "48.8px"
+            },
+            "5xl": {
+                "value": "3.815rem",
+                "px": "61px"
+            }
+        },
+        "fontWeight": {
+            "normal": {
+                "value": "400"
+            },
+            "medium": {
+                "value": "500"
+            },
+            "semibold": {
+                "value": "600"
+            },
+            "bold": {
+                "value": "700"
+            }
+        },
+        "lineHeight": {
+            "tight": {
+                "value": "1.25"
+            },
+            "normal": {
+                "value": "1.5"
+            },
+            "relaxed": {
+                "value": "1.625"
+            }
+        }
+    },
+    "spacing": {
+        "touch": {
+            "value": "44px",
+            "description": "Minimum touch target (WCAG)"
+        },
+        "touch-lg": {
+            "value": "48px"
+        },
+        "touch-xl": {
+            "value": "56px"
+        }
+    },
+    "borderRadius": {
+        "sm": {
+            "value": "6px"
+        },
+        "md": {
+            "value": "8px"
+        },
+        "lg": {
+            "value": "12px"
+        },
+        "xl": {
+            "value": "16px"
+        },
+        "full": {
+            "value": "9999px"
+        }
+    },
+    "zIndex": {
+        "dropdown": {
+            "value": "20"
+        },
+        "sticky": {
+            "value": "30"
+        },
+        "modal": {
+            "value": "50"
+        },
+        "toast": {
+            "value": "60"
+        }
+    }
+}

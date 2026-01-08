@@ -1,0 +1,279 @@
+{
+    "name": "Mãos Amigas Design System - Dark Mode",
+    "version": "1.0.0",
+    "generated": "2026-01-08",
+    "mode": "dark",
+    "colors": {
+        "background": {
+            "base": {
+                "value": "#0F0F12",
+                "rgb": "rgb(15, 15, 18)",
+                "hsl": "hsl(240, 9%, 6%)",
+                "cssVar": "--color-bg",
+                "usage": [
+                    "body",
+                    "app background",
+                    "root element"
+                ]
+            },
+            "elevated": {
+                "value": "#16161A",
+                "rgb": "rgb(22, 22, 26)",
+                "hsl": "hsl(240, 8%, 9%)",
+                "cssVar": "--color-bg-elevated",
+                "usage": [
+                    "cards",
+                    "modals",
+                    "dropdowns",
+                    "popovers"
+                ]
+            },
+            "surface": {
+                "value": "#1C1C21",
+                "rgb": "rgb(28, 28, 33)",
+                "hsl": "hsl(240, 8%, 12%)",
+                "cssVar": "--color-bg-surface",
+                "usage": [
+                    "hover states",
+                    "selected items"
+                ]
+            },
+            "muted": {
+                "value": "#24242B",
+                "rgb": "rgb(36, 36, 43)",
+                "hsl": "hsl(240, 9%, 15%)",
+                "cssVar": "--color-bg-muted",
+                "usage": [
+                    "inputs",
+                    "wells",
+                    "disabled backgrounds"
+                ]
+            }
+        },
+        "text": {
+            "primary": {
+                "value": "#F5F5F8",
+                "rgb": "rgb(245, 245, 248)",
+                "hsl": "hsl(240, 20%, 97%)",
+                "cssVar": "--color-text",
+                "contrastRatio": "18.1:1",
+                "wcagLevel": "AAA",
+                "usage": [
+                    "headings",
+                    "body text",
+                    "primary content"
+                ]
+            },
+            "secondary": {
+                "value": "#C4C4CC",
+                "rgb": "rgb(196, 196, 204)",
+                "hsl": "hsl(240, 8%, 78%)",
+                "cssVar": "--color-text-secondary",
+                "contrastRatio": "10.2:1",
+                "wcagLevel": "AAA",
+                "usage": [
+                    "labels",
+                    "descriptions",
+                    "secondary content"
+                ]
+            },
+            "tertiary": {
+                "value": "#9898A3",
+                "rgb": "rgb(152, 152, 163)",
+                "hsl": "hsl(240, 6%, 62%)",
+                "cssVar": "--color-text-tertiary",
+                "contrastRatio": "5.8:1",
+                "wcagLevel": "AA",
+                "usage": [
+                    "placeholders",
+                    "hints",
+                    "captions"
+                ]
+            },
+            "disabled": {
+                "value": "#71717A",
+                "rgb": "rgb(113, 113, 122)",
+                "hsl": "hsl(240, 4%, 46%)",
+                "contrastRatio": "4.1:1",
+                "wcagLevel": "AA-Large",
+                "usage": [
+                    "disabled text",
+                    "inactive elements"
+                ],
+                "accessibilityNote": "Fails WCAG AA for small text"
+            }
+        },
+        "border": {
+            "default": {
+                "value": "#2E2E36",
+                "rgb": "rgb(46, 46, 54)",
+                "cssVar": "--color-border",
+                "usage": [
+                    "input borders",
+                    "card borders",
+                    "dividers"
+                ]
+            },
+            "subtle": {
+                "value": "#232329",
+                "rgb": "rgb(35, 35, 41)",
+                "cssVar": "--color-border-subtle",
+                "usage": [
+                    "subtle separators",
+                    "hover borders"
+                ]
+            },
+            "strong": {
+                "value": "#3D3D47",
+                "rgb": "rgb(61, 61, 71)",
+                "usage": [
+                    "focus borders",
+                    "active states"
+                ]
+            }
+        },
+        "brand": {
+            "50": {
+                "value": "rgba(30, 138, 173, 0.1)",
+                "usage": [
+                    "light tint backgrounds"
+                ]
+            },
+            "100": {
+                "value": "rgba(30, 138, 173, 0.15)",
+                "usage": [
+                    "badge backgrounds"
+                ]
+            },
+            "200": {
+                "value": "rgba(30, 138, 173, 0.2)",
+                "usage": [
+                    "hover backgrounds"
+                ]
+            },
+            "400": {
+                "value": "#47BFD7",
+                "rgb": "rgb(71, 191, 215)",
+                "usage": [
+                    "hover states",
+                    "links"
+                ]
+            },
+            "500": {
+                "value": "#1E8AAD",
+                "rgb": "rgb(30, 138, 173)",
+                "usage": [
+                    "primary buttons",
+                    "accents"
+                ]
+            },
+            "600": {
+                "value": "#186E8A",
+                "rgb": "rgb(24, 110, 138)",
+                "usage": [
+                    "active states"
+                ]
+            }
+        },
+        "semantic": {
+            "success": {
+                "text": {
+                    "value": "#34D399",
+                    "rgb": "rgb(52, 211, 153)"
+                },
+                "background": {
+                    "value": "rgba(16, 185, 129, 0.15)"
+                },
+                "border": {
+                    "value": "#10B981"
+                }
+            },
+            "warning": {
+                "text": {
+                    "value": "#FBBF24",
+                    "rgb": "rgb(251, 191, 36)"
+                },
+                "background": {
+                    "value": "rgba(245, 158, 11, 0.15)"
+                },
+                "border": {
+                    "value": "#F59E0B"
+                }
+            },
+            "danger": {
+                "text": {
+                    "value": "#F87171",
+                    "rgb": "rgb(248, 113, 113)"
+                },
+                "background": {
+                    "value": "rgba(239, 68, 68, 0.15)"
+                },
+                "border": {
+                    "value": "#EF4444"
+                }
+            },
+            "info": {
+                "text": {
+                    "value": "#47BFD7",
+                    "rgb": "rgb(71, 191, 215)"
+                },
+                "background": {
+                    "value": "rgba(30, 138, 173, 0.15)"
+                },
+                "border": {
+                    "value": "#1E8AAD"
+                }
+            }
+        },
+        "interactive": {
+            "hover": {
+                "value": "rgba(255, 255, 255, 0.05)"
+            },
+            "hoverStrong": {
+                "value": "rgba(255, 255, 255, 0.08)"
+            },
+            "pressed": {
+                "value": "rgba(255, 255, 255, 0.12)"
+            },
+            "focus": {
+                "value": "#1E8AAD",
+                "ringOffset": "#0F0F12"
+            }
+        },
+        "overlay": {
+            "default": {
+                "value": "rgba(0, 0, 0, 0.75)"
+            },
+            "strong": {
+                "value": "rgba(0, 0, 0, 0.85)"
+            }
+        }
+    },
+    "shadows": {
+        "soft": "0 1px 3px 0 rgba(0, 0, 0, 0.5)",
+        "medium": "0 4px 6px -1px rgba(0, 0, 0, 0.6)",
+        "strong": "0 10px 15px -3px rgba(0, 0, 0, 0.7)",
+        "glow": "0 0 0 1px rgba(255, 255, 255, 0.05)",
+        "glowBrand": "0 0 20px -5px rgba(30, 138, 173, 0.4)",
+        "glowSuccess": "0 0 20px -5px rgba(16, 185, 129, 0.4)",
+        "glowWarning": "0 0 20px -5px rgba(245, 158, 11, 0.4)",
+        "glowDanger": "0 0 20px -5px rgba(239, 68, 68, 0.4)"
+    },
+    "effects": {
+        "glass": {
+            "background": "rgba(22, 22, 26, 0.9)",
+            "blur": "16px"
+        },
+        "glassStrong": {
+            "background": "rgba(22, 22, 26, 0.95)",
+            "blur": "24px"
+        },
+        "selection": {
+            "background": "rgba(30, 138, 173, 0.4)"
+        },
+        "scrollbar": {
+            "thumb": "rgba(255, 255, 255, 0.15)",
+            "thumbHover": "rgba(255, 255, 255, 0.25)"
+        }
+    }
+}

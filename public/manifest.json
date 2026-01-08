@@ -1,0 +1,24 @@
+{
+    "name": "Mãos Amigas - Avaliação",
+    "short_name": "Mãos Amigas",
+    "description": "Sistema de avaliação presencial para cuidados domiciliares",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FAFAFA",
+    "theme_color": "#1E8AAD",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

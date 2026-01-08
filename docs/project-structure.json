@@ -1,0 +1,424 @@
+{
+    "project": {
+        "name": "maos-amigas-avaliacao",
+        "version": "1.0.0",
+        "description": "Sistema de Avaliação Domiciliar para Cuidadores",
+        "framework": "Next.js 14.1 (App Router)",
+        "language": "TypeScript 5.3",
+        "styling": "Tailwind CSS 3.4",
+        "stateManagement": "Zustand 4.5"
+    },
+    "statistics": {
+        "totalFiles": 197,
+        "totalComponents": 71,
+        "totalPages": 28,
+        "totalStores": 6,
+        "totalHooks": 9,
+        "totalTypes": 163,
+        "totalDependencies": 34
+    },
+    "structure": {
+        "src": {
+            "app": {
+                "(admin)": [
+                    "usuarios/page.tsx"
+                ],
+                "(auth)": [
+                    "login/page.tsx",
+                    "registro/page.tsx"
+                ],
+                "(portals)": {
+                    "admin": [
+                        "page.tsx"
+                    ],
+                    "cliente": [
+                        "page.tsx",
+                        "agenda/page.tsx",
+                        "mensagens/page.tsx",
+                        "paciente/page.tsx"
+                    ],
+                    "pro": {
+                        "cuidador": [
+                            "page.tsx",
+                            "agenda/page.tsx",
+                            "pacientes/page.tsx",
+                            "relatorios/page.tsx",
+                            "mensagens/page.tsx"
+                        ],
+                        "enfermeiro": [
+                            "page.tsx",
+                            "agenda/page.tsx",
+                            "pacientes/page.tsx",
+                            "procedimentos/page.tsx",
+                            "mensagens/page.tsx"
+                        ]
+                    }
+                },
+                "api": [
+                    "auth/[...nextauth]/route.ts"
+                ],
+                "avaliacao": [
+                    "page.tsx",
+                    "nova/page.tsx",
+                    "[id]/page.tsx",
+                    "[id]/pdf/page.tsx"
+                ]
+            },
+            "components": {
+                "ui": [
+                    "Accordion.tsx",
+                    "AddressAutocomplete.tsx",
+                    "Badge.tsx",
+                    "BottomNavigation.tsx",
+                    "BottomSheet.tsx",
+                    "Button.tsx",
+                    "Card.tsx",
+                    "Checkbox.tsx",
+                    "EmptyState.tsx",
+                    "EmptyStates.tsx",
+                    "ErrorBoundary.tsx",
+                    "Header.tsx",
+                    "Input.tsx",
+                    "LoadingStates.tsx",
+                    "MaskedInput.tsx",
+                    "Modal.tsx",
+                    "Progress.tsx",
+                    "RadioGroup.tsx",
+                    "Select.tsx",
+                    "Skeleton.tsx",
+                    "Slider.tsx",
+                    "StepIndicator.tsx",
+                    "Switch.tsx",
+                    "Textarea.tsx",
+                    "Toast.tsx",
+                    "Transitions.tsx",
+                    "index.ts"
+                ],
+                "evaluation": [
+                    "RecoveryBanner.tsx",
+                    "Step1Discovery.tsx",
+                    "Step2Patient.tsx",
+                    "Step3Health.tsx",
+                    "Step4Abemid.tsx",
+                    "Step5Katz.tsx",
+                    "Step6Responsibilities.tsx",
+                    "Step7Proposal.tsx",
+                    "Step8Evaluator.tsx",
+                    "Step9KYC.tsx"
+                ],
+                "layout": [
+                    "Sidebar.tsx",
+                    "PageWrapper.tsx"
+                ],
+                "dashboard": [
+                    "StatsCard.tsx",
+                    "RecentActivity.tsx",
+                    "QuickActions.tsx",
+                    "Overview.tsx"
+                ],
+                "shared": [
+                    "QuestionCard.tsx",
+                    "PageHeader.tsx",
+                    "DataTable.tsx",
+                    "Filters.tsx",
+                    "SearchInput.tsx"
+                ],
+                "portals": [
+                    "ClientDashboard.tsx",
+                    "CaregiverDashboard.tsx",
+                    "NurseDashboard.tsx",
+                    "AdminDashboard.tsx"
+                ],
+                "auth": [
+                    "LoginForm.tsx",
+                    "RegisterForm.tsx",
+                    "ForgotPassword.tsx"
+                ],
+                "chat": [
+                    "ChatWindow.tsx",
+                    "MessageList.tsx",
+                    "MessageInput.tsx"
+                ],
+                "audit": [
+                    "AuditLogViewer.tsx",
+                    "AuditFilters.tsx"
+                ],
+                "sync": [
+                    "SyncStatus.tsx",
+                    "OfflineIndicator.tsx"
+                ],
+                "proposal": [
+                    "ProposalPreview.tsx"
+                ]
+            },
+            "contexts": [
+                "AuthContext.tsx",
+                "EvaluationContext.tsx",
+                "OfflineContext.tsx",
+                "ThemeContext.tsx"
+            ],
+            "stores": [
+                "authStore.ts",
+                "auditStore.ts",
+                "chatStore.ts",
+                "evaluationStore.ts",
+                "notificationStore.ts",
+                "syncStore.ts"
+            ],
+            "hooks": [
+                "useAuditLog.ts",
+                "useAuth.ts",
+                "useEvaluationRecovery.ts",
+                "useLocalStorage.ts",
+                "useSecureStorage.ts",
+                "useSwipe.ts",
+                "useSyncStatus.ts",
+                "useValidatedForm.ts",
+                "useVibration.ts"
+            ],
+            "lib": {
+                "analytics": [
+                    "tracker.ts",
+                    "events.ts"
+                ],
+                "audit": [
+                    "logger.ts",
+                    "retention.ts",
+                    "export.ts"
+                ],
+                "auth": [
+                    "session.ts",
+                    "middleware.ts",
+                    "permissions.ts",
+                    "tokens.ts",
+                    "rate-limit.ts",
+                    "nextauth-options.ts"
+                ],
+                "calculations": [
+                    "abemidCalculator.ts",
+                    "katzCalculator.ts",
+                    "lawtonCalculator.ts",
+                    "pricingCalculator.ts",
+                    "complexityCalculator.ts",
+                    "contractCalculator.ts",
+                    "index.ts"
+                ],
+                "crypto": [
+                    "hash.ts",
+                    "encrypt.ts",
+                    "decrypt.ts",
+                    "pin.ts",
+                    "keys.ts"
+                ],
+                "schemas": [
+                    "user.ts",
+                    "evaluation.ts",
+                    "patient.ts",
+                    "contract.ts",
+                    "index.ts"
+                ],
+                "security": [
+                    "sanitize.ts",
+                    "validate.ts",
+                    "xss.ts",
+                    "csrf.ts",
+                    "headers.ts",
+                    "audit.ts"
+                ],
+                "storage": [
+                    "indexeddb.ts",
+                    "localStorage.ts"
+                ],
+                "sync": [
+                    "queue.ts",
+                    "resolver.ts",
+                    "api.ts"
+                ],
+                "utils": [
+                    "cn.ts",
+                    "format.ts",
+                    "date.ts",
+                    "currency.ts",
+                    "validators.ts"
+                ],
+                "validations": [
+                    "cpf.ts",
+                    "email.ts",
+                    "phone.ts",
+                    "cep.ts"
+                ]
+            },
+            "types": [
+                "audit.ts",
+                "auth.ts",
+                "chat.ts",
+                "contract.ts",
+                "discovery.ts",
+                "evaluation.ts",
+                "health.ts",
+                "index.ts",
+                "next-auth.d.ts",
+                "notifications.ts",
+                "patient.ts",
+                "pricing.ts",
+                "proposal.ts",
+                "safety.ts",
+                "scales.ts",
+                "schedule.ts",
+                "sync.ts",
+                "ui.ts",
+                "users/"
+            ],
+            "styles": {
+                "globals.css": "Main stylesheet with Tailwind",
+                "tokens/": [
+                    "colors.css",
+                    "typography.css",
+                    "spacing.css",
+                    "effects.css",
+                    "index.css"
+                ]
+            }
+        },
+        "docs": [
+            "PROJECT-OVERVIEW.md",
+            "PAGES-MAP.md",
+            "FEATURES-LIST.md",
+            "COMPONENTS-CATALOG.md",
+            "DATA-MODELS.md"
+        ],
+        "config": [
+            "package.json",
+            "tsconfig.json",
+            "tailwind.config.ts",
+            "next.config.js",
+            "postcss.config.js"
+        ]
+    },
+    "dependencies": {
+        "production": {
+            "core": [
+                "next@14.1",
+                "react@18.2",
+                "react-dom@18.2",
+                "typescript@5.3"
+            ],
+            "state": [
+                "zustand@4.5"
+            ],
+            "forms": [
+                "react-hook-form@7.50",
+                "zod@3.22",
+                "@hookform/resolvers@3.3"
+            ],
+            "ui": [
+                "tailwindcss@3.4",
+                "tailwind-merge@2.2",
+                "clsx@2.1",
+                "framer-motion@11.0",
+                "lucide-react@0.330"
+            ],
+            "radix": [
+                "@radix-ui/react-accordion",
+                "@radix-ui/react-checkbox",
+                "@radix-ui/react-dialog",
+                "@radix-ui/react-progress",
+                "@radix-ui/react-radio-group",
+                "@radix-ui/react-select",
+                "@radix-ui/react-slider",
+                "@radix-ui/react-toast"
+            ],
+            "auth": [
+                "next-auth@4.24",
+                "bcryptjs@3.0"
+            ],
+            "pdf": [
+                "jspdf@2.5",
+                "html2canvas@1.4"
+            ],
+            "storage": [
+                "idb@8.0"
+            ],
+            "signature": [
+                "react-signature-canvas@1.0"
+            ],
+            "utils": [
+                "date-fns@3.3",
+                "uuid@9.0"
+            ]
+        },
+        "development": {
+            "types": [
+                "@types/node",
+                "@types/react",
+                "@types/react-dom",
+                "@types/bcryptjs",
+                "@types/uuid",
+                "@types/react-signature-canvas"
+            ],
+            "build": [
+                "autoprefixer",
+                "postcss"
+            ],
+            "lint": [
+                "eslint",
+                "eslint-config-next"
+            ],
+            "pwa": [
+                "next-pwa@5.6"
+            ]
+        }
+    },
+    "features": {
+        "authentication": {
+            "status": "complete",
+            "features": [
+                "email/password login",
+                "session management",
+                "RBAC",
+                "route protection",
+                "JWT tokens"
+            ]
+        },
+        "evaluation": {
+            "status": "complete",
+            "steps": 9,
+            "features": [
+                "10-step discovery",
+                "ABEMID scale",
+                "KATZ scale",
+                "dynamic pricing",
+                "6 billing types",
+                "contract generation"
+            ]
+        },
+        "portals": {
+            "status": "complete",
+            "types": [
+                "admin",
+                "client",
+                "caregiver",
+                "nurse"
+            ]
+        },
+        "offline": {
+            "status": "complete",
+            "features": [
+                "PWA",
+                "IndexedDB storage",
+                "auto-sync",
+                "conflict resolution"
+            ]
+        },
+        "security": {
+            "status": "complete",
+            "features": [
+                "audit trail",
+                "data encryption",
+                "input validation",
+                "XSS protection"
+            ]
+        }
+    },
+    "generatedAt": "2026-01-08T13:12:41-03:00"
+}
