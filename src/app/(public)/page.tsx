@@ -7,17 +7,17 @@ import {
     Award,
     Phone,
     ArrowRight,
-    CheckCircle,
     Star,
     Stethoscope,
     UserCheck,
     Activity,
 } from 'lucide-react';
 import type { Metadata } from 'next';
+import { HeroSection } from '@/components/public/sections';
 
 export const metadata: Metadata = {
     title: 'Cuidado Humanizado para Quem Você Ama',
-    description: 'Mãos Amigas Home Care oferece cuidadores, técnicos de enfermagem e enfermeiros 24h. Avaliação gratuita e atendimento personalizado.',
+    description: 'Mãos Amigas Home Care oferece cuidadores, técnicos de enfermagem e enfermeiros 24h em Toledo-PR. Avaliação gratuita e atendimento personalizado.',
 };
 
 const SERVICES = [
@@ -45,13 +45,13 @@ const BENEFITS = [
     { icon: Shield, text: 'Profissionais verificados e treinados' },
     { icon: Clock, text: 'Atendimento 24 horas' },
     { icon: Users, text: 'Equipe multidisciplinar' },
-    { icon: Award, text: 'Mais de 10 anos de experiência' },
+    { icon: Award, text: 'Mais de 15 anos de experiência' },
 ];
 
 const STATS = [
-    { value: '10+', label: 'Anos de experiência' },
-    { value: '5.000+', label: 'Famílias atendidas' },
-    { value: '500+', label: 'Profissionais' },
+    { value: '15+', label: 'Anos de experiência' },
+    { value: '500+', label: 'Famílias atendidas' },
+    { value: '100+', label: 'Profissionais' },
     { value: '98%', label: 'Satisfação' },
 ];
 
@@ -62,87 +62,8 @@ const STATS = [
 export default function HomePage() {
     return (
         <>
-            {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-brand-50 via-white to-brand-50 overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-5">
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-brand-500 rounded-full blur-3xl" />
-                    <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-400 rounded-full blur-3xl" />
-                </div>
-
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-6">
-                                <Heart className="w-4 h-4" />
-                                <span>Cuidado que faz a diferença</span>
-                            </div>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight">
-                                Cuidado <span className="text-brand-600">humanizado</span> para quem você ama
-                            </h1>
-                            <p className="mt-6 text-lg text-neutral-600 leading-relaxed">
-                                Oferecemos serviços de home care com cuidadores, técnicos de enfermagem
-                                e enfermeiros altamente qualificados. Atendimento 24 horas, 7 dias por semana.
-                            </p>
-                            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                                <Link
-                                    href="/contato"
-                                    className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/25"
-                                >
-                                    Solicitar Avaliação Gratuita
-                                    <ArrowRight className="w-5 h-5" />
-                                </Link>
-                                <a
-                                    href="tel:+5511999999999"
-                                    className="inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-neutral-300 text-neutral-700 rounded-xl font-semibold hover:border-brand-500 hover:text-brand-600 transition-colors"
-                                >
-                                    <Phone className="w-5 h-5" />
-                                    (11) 99999-9999
-                                </a>
-                            </div>
-                            {/* Trust Badges */}
-                            <div className="mt-10 flex items-center gap-6">
-                                {BENEFITS.slice(0, 2).map((benefit) => (
-                                    <div key={benefit.text} className="flex items-center gap-2 text-neutral-600">
-                                        <CheckCircle className="w-5 h-5 text-success-500" />
-                                        <span className="text-sm">{benefit.text}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="aspect-square bg-gradient-to-br from-brand-100 to-brand-200 rounded-3xl flex items-center justify-center">
-                                <Heart className="w-48 h-48 text-brand-500 opacity-50" />
-                            </div>
-                            {/* Floating Cards */}
-                            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 bg-success-100 rounded-full flex items-center justify-center">
-                                        <Award className="w-6 h-6 text-success-600" />
-                                    </div>
-                                    <div>
-                                        <p className="font-bold text-neutral-900">98%</p>
-                                        <p className="text-sm text-neutral-500">Satisfação</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl">
-                                <div className="flex items-center gap-3">
-                                    <div className="flex -space-x-2">
-                                        <div className="w-8 h-8 bg-brand-200 rounded-full border-2 border-white" />
-                                        <div className="w-8 h-8 bg-brand-300 rounded-full border-2 border-white" />
-                                        <div className="w-8 h-8 bg-brand-400 rounded-full border-2 border-white" />
-                                    </div>
-                                    <div>
-                                        <p className="font-bold text-neutral-900">500+</p>
-                                        <p className="text-sm text-neutral-500">Profissionais</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Hero Section - Animated */}
+            <HeroSection />
 
             {/* Stats Section */}
             <section className="bg-brand-600 py-12">
