@@ -3,20 +3,20 @@ import { Heart, Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from '
 import { cn } from '@/lib/utils/cn';
 
 const QUICK_LINKS = [
-    { href: '/', label: 'Início' },
-    { href: '/servicos', label: 'Serviços' },
-    { href: '/sobre', label: 'Sobre Nós' },
-    { href: '/depoimentos', label: 'Depoimentos' },
-    { href: '/contato', label: 'Contato' },
+    { href: '/site', label: 'Início' },
+    { href: '/site/servicos', label: 'Serviços' },
+    { href: '/site/sobre', label: 'Sobre Nós' },
+    { href: '/site/depoimentos', label: 'Depoimentos' },
+    { href: '/site/contato', label: 'Contato' },
 ];
 
 const SERVICES_LINKS = [
-    'Cuidado Domiciliar',
-    'Acompanhamento Médico',
-    'Atividades Diárias',
-    'Cuidados Especializados',
-    'Fisioterapia',
-    'Nutrição',
+    { href: '/site/servicos/cuidado-domiciliar', label: 'Cuidado Domiciliar' },
+    { href: '/site/servicos/acompanhamento-medico', label: 'Acompanhamento Médico' },
+    { href: '/site/servicos/atividades-diarias', label: 'Atividades Diárias' },
+    { href: '/site/servicos/cuidados-especializados', label: 'Cuidados Especializados' },
+    { href: '/site/servicos/fisioterapia', label: 'Fisioterapia' },
+    { href: '/site/servicos/nutricao', label: 'Nutrição' },
 ];
 
 const SOCIAL_LINKS = [
@@ -121,13 +121,13 @@ export function PublicFooter() {
                         <h4 className="font-semibold text-white mb-6 text-lg">Serviços</h4>
                         <ul className="space-y-3">
                             {SERVICES_LINKS.map((service) => (
-                                <li key={service}>
+                                <li key={service.href}>
                                     <Link
-                                        href="/site/servicos"
+                                        href={service.href}
                                         className="text-slate-400 hover:text-brand-400 transition-colors inline-flex items-center gap-1 group"
                                     >
                                         <span className="w-0 h-0.5 bg-brand-400 group-hover:w-2 transition-all duration-200" />
-                                        {service}
+                                        {service.label}
                                     </Link>
                                 </li>
                             ))}
@@ -192,13 +192,13 @@ export function PublicFooter() {
                             © {currentYear} Mãos Amigas Home Care. Todos os direitos reservados.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
-                            <Link href="/privacidade" className="text-slate-500 hover:text-brand-400 transition-colors">
+                            <Link href="/site/privacidade" className="text-slate-500 hover:text-brand-400 transition-colors">
                                 Política de Privacidade
                             </Link>
-                            <Link href="/termos" className="text-slate-500 hover:text-brand-400 transition-colors">
+                            <Link href="/site/termos" className="text-slate-500 hover:text-brand-400 transition-colors">
                                 Termos de Uso
                             </Link>
-                            <Link href="/lgpd" className="text-slate-500 hover:text-brand-400 transition-colors">
+                            <Link href="/site/lgpd" className="text-slate-500 hover:text-brand-400 transition-colors">
                                 LGPD
                             </Link>
                         </div>
