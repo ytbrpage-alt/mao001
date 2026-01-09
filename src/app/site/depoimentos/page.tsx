@@ -172,7 +172,7 @@ export default function DepoimentosPage() {
                         Solicite uma avaliação gratuita e descubra como podemos ajudar sua família.
                     </p>
                     <Link
-                        href="/contato"
+                        href="/site/contato"
                         className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-white text-brand-600 rounded-xl font-semibold hover:bg-neutral-100 transition-colors"
                     >
                         Quero Fazer Parte

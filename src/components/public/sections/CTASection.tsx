@@ -61,7 +61,7 @@ export function CTASection() {
                     {/* CTAs */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                         <Link
-                            href="/contato"
+                            href="/site/contato"
                             className={cn(
                                 'inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg',
                                 'bg-white text-brand-600 shadow-2xl shadow-black/20',

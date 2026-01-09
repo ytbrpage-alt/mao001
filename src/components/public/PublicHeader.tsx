@@ -8,11 +8,11 @@ import { cn } from '@/lib/utils/cn';
 import type { NavLink } from '@/types/public.types';
 
 const NAV_LINKS: NavLink[] = [
-    { href: '/', label: 'Início' },
-    { href: '/servicos', label: 'Serviços' },
-    { href: '/sobre', label: 'Sobre Nós' },
-    { href: '/depoimentos', label: 'Depoimentos' },
-    { href: '/contato', label: 'Contato' },
+    { href: '/site', label: 'Início' },
+    { href: '/site/servicos', label: 'Serviços' },
+    { href: '/site/sobre', label: 'Sobre Nós' },
+    { href: '/site/depoimentos', label: 'Depoimentos' },
+    { href: '/site/contato', label: 'Contato' },
 ];
 
 /**
@@ -59,7 +59,7 @@ export function PublicHeader() {
     }, [isMobileMenuOpen]);
 
     const isActive = (href: string) => {
-        if (href === '/') return pathname === '/';
+        if (href === '/site') return pathname === '/site';
         return pathname.startsWith(href);
     };
 
@@ -150,7 +150,7 @@ export function PublicHeader() {
                             Área do Cliente
                         </Link>
                         <Link
-                            href="/contato"
+                            href="/site/contato"
                             className={cn(
                                 'px-5 py-2.5 rounded-xl font-semibold transition-all duration-200',
                                 'bg-brand-600 text-white shadow-lg shadow-brand-500/30',
@@ -236,7 +236,7 @@ export function PublicHeader() {
                         </Link>
 
                         <Link
-                            href="/contato"
+                            href="/site/contato"
                             className="block w-full px-4 py-3 text-center rounded-xl font-semibold bg-brand-600 text-white hover:bg-brand-700 transition-colors"
                         >
                             Agendar Avaliação Gratuita

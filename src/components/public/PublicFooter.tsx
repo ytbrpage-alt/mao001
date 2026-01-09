@@ -123,7 +123,7 @@ export function PublicFooter() {
                             {SERVICES_LINKS.map((service) => (
                                 <li key={service}>
                                     <Link
-                                        href="/servicos"
+                                        href="/site/servicos"
                                         className="text-slate-400 hover:text-brand-400 transition-colors inline-flex items-center gap-1 group"
                                     >
                                         <span className="w-0 h-0.5 bg-brand-400 group-hover:w-2 transition-all duration-200" />

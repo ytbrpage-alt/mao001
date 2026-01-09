@@ -81,7 +81,7 @@ export function HeroSection() {
                     className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
                 >
                     <Link
-                        href="/contato"
+                        href="/site/contato"
                         className={cn(
                             'inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg',
                             'bg-white text-brand-600 shadow-2xl shadow-black/20',
@@ -94,7 +94,7 @@ export function HeroSection() {
                     </Link>
 
                     <Link
-                        href="/servicos"
+                        href="/site/servicos"
                         className={cn(
                             'inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg',
                             'bg-white/10 backdrop-blur-sm text-white border-2 border-white/30',

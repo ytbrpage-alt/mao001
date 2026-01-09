@@ -196,7 +196,7 @@ export function ServicesSection() {
                     className="text-center"
                 >
                     <Link
-                        href="/contato"
+                        href="/site/contato"
                         className={cn(
                             'inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg',
                             'bg-gradient-to-r from-brand-600 to-emerald-600 text-white',

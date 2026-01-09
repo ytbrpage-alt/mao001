@@ -155,7 +155,7 @@ export default function ServicosPage() {
                                             {service.description}
                                         </p>
                                         <Link
-                                            href="/contato"
+                                            href="/site/contato"
                                             className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 transition-colors"
                                         >
                                             Solicitar Avaliação
@@ -192,7 +192,7 @@ export default function ServicosPage() {
                     </p>
                     <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            href="/contato"
+                            href="/site/contato"
                             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-brand-600 rounded-xl font-semibold hover:bg-neutral-100 transition-colors"
                         >
                             Agendar Avaliação Gratuita
