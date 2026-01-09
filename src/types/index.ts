@@ -160,3 +160,13 @@ export type {
     VersionMetadata,
     ApiResponse,
 } from './sync';
+
+// Public/institutional page types
+export type {
+    Service,
+    Testimonial,
+    ContactForm,
+    TeamMember,
+    FAQItem,
+    NavLink,
+} from './public.types';
