@@ -1,6 +1,5 @@
 import { PublicHeader } from '@/components/public/PublicHeader';
 import { PublicFooter } from '@/components/public/PublicFooter';
-import { OrganizationJsonLd, LocalBusinessJsonLd, ServiceJsonLd } from '@/components/public/JsonLd';
 import type { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
@@ -86,7 +85,6 @@ export const viewport: Viewport = {
  * - Main content area with padding for fixed header
  * - Full-width footer
  * - SEO optimized metadata
- * - JSON-LD structured data
  */
 export default function PublicLayout({
     children,
@@ -94,19 +92,12 @@ export default function PublicLayout({
     children: React.ReactNode;
 }) {
     return (
-        <>
-            {/* Structured Data */}
-            <OrganizationJsonLd />
-            <LocalBusinessJsonLd />
-            <ServiceJsonLd />
-
-            <div className="min-h-screen flex flex-col bg-white">
-                <PublicHeader />
-                <main className="flex-1 pt-16 lg:pt-20">
-                    {children}
-                </main>
-                <PublicFooter />
-            </div>
-        </>
+        <div className="min-h-screen flex flex-col bg-white">
+            <PublicHeader />
+            <main className="flex-1 pt-16 lg:pt-20">
+                {children}
+            </main>
+            <PublicFooter />
+        </div>
     );
 }
