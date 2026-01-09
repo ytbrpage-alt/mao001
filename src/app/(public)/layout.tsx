@@ -1,8 +1,10 @@
 import { PublicHeader } from '@/components/public/PublicHeader';
 import { PublicFooter } from '@/components/public/PublicFooter';
+import { OrganizationJsonLd, LocalBusinessJsonLd, ServiceJsonLd } from '@/components/public/JsonLd';
 import type { Metadata, Viewport } from 'next';
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://maosamigas.com.br'),
     title: {
         template: '%s | Mãos Amigas Home Care',
         default: 'Mãos Amigas - Cuidadores de Idosos em Toledo-PR',
@@ -20,6 +22,8 @@ export const metadata: Metadata = {
         'idosos',
         'acompanhante',
         'técnico de enfermagem',
+        'cuidador de idosos Toledo',
+        'assistência domiciliar',
     ],
     authors: [{ name: 'Mãos Amigas Home Care', url: 'https://maosamigas.com.br' }],
     creator: 'Mãos Amigas Home Care',
@@ -82,6 +86,7 @@ export const viewport: Viewport = {
  * - Main content area with padding for fixed header
  * - Full-width footer
  * - SEO optimized metadata
+ * - JSON-LD structured data
  */
 export default function PublicLayout({
     children,
@@ -89,12 +94,19 @@ export default function PublicLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="min-h-screen flex flex-col bg-white">
-            <PublicHeader />
-            <main className="flex-1 pt-16 lg:pt-20">
-                {children}
-            </main>
-            <PublicFooter />
-        </div>
+        <>
+            {/* Structured Data */}
+            <OrganizationJsonLd />
+            <LocalBusinessJsonLd />
+            <ServiceJsonLd />
+
+            <div className="min-h-screen flex flex-col bg-white">
+                <PublicHeader />
+                <main className="flex-1 pt-16 lg:pt-20">
+                    {children}
+                </main>
+                <PublicFooter />
+            </div>
+        </>
     );
 }
