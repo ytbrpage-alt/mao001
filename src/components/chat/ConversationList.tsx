@@ -46,7 +46,7 @@ function ConversationItem({
         if (conversation.type === 'direct') {
             const other = conversation.participants.find(p => p.userId !== currentUserId);
             if (other?.userAvatar) {
-                return <img src={other.userAvatar} alt="" className="w-full h-full rounded-full object-cover" />;
+                return <img src={other.userAvatar} alt="Avatar do contato" className="w-full h-full rounded-full object-cover" />;
             }
             return other?.userName.split(' ').map(n => n[0]).slice(0, 2).join('') || '?';
         }

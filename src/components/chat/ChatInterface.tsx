@@ -65,7 +65,7 @@ function MessageBubble({
             {showAvatar && !isOwn ? (
                 <div className="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 text-xs font-medium flex-shrink-0">
                     {message.senderAvatar ? (
-                        <img src={message.senderAvatar} alt="" className="w-full h-full rounded-full object-cover" />
+                        <img src={message.senderAvatar} alt="Avatar do remetente" className="w-full h-full rounded-full object-cover" />
                     ) : (
                         message.senderName.split(' ').map(n => n[0]).slice(0, 2).join('')
                     )}
@@ -110,7 +110,7 @@ function MessageBubble({
 
                     {/* Imagem */}
                     {message.type === 'image' && message.mediaUrl && (
-                        <img src={message.mediaUrl} alt="" className="rounded-lg max-w-full" />
+                        <img src={message.mediaUrl} alt="Mídia compartilhada" className="rounded-lg max-w-full" />
                     )}
 
                     {/* Rodapé */}
